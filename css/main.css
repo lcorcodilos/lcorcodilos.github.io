@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Quicksand:wght@300;400;500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111111;
+  color: #bcbcbc;
+  font-family: Montserrat;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 2em 1em;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .logo {
+  font-weight: bold;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+}
+
+header ul li a {
+  padding: 0 .6em;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+}
+
+.mainbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+}
+
+.box {
+  background-color: #1d1d1d;
+  margin: 0 0.7em auto;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+}
+
+.content {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.profile {
+  background-color: #1d1d1d;
+  padding: 1em;
+  bottom: 1em;
+  border-radius: 0.7em;
+}
+
+.profile-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-box {
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

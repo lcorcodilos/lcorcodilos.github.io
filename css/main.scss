@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&family=Quicksand:wght@300;400;500&display=swap');
+
+///////////
+// SETUP //
+///////////
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #111111;
+    color: rgb(188, 188, 188);
+    font-family: Montserrat;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+////////////
+// HEADER //
+////////////
+header {
+    margin: 2em 1em;
+    width: 100%;
+    display: flex;
+
+    .logo {
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+        li a {
+            padding: 0 .6em;
+        }
+        border-bottom: 1px solid white;
+        padding-bottom: 1em;
+    }
+    
+}
+////////////////////////////
+// WRAPPERS FOR MAIN BODY //
+////////////////////////////
+.main {
+    display: flex;
+}
+
+// WRAPPER FOR LEFT
+.sidebar {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 0 0 40%;
+}
+// WRAPPER FOR RIGHT
+.mainbar {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 1;
+}
+// GENERIC BOX
+.box {
+    background-color: #1d1d1d;
+    margin: 0 0.7em auto;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+} 
+// Paragraph
+.content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+////////////////////
+// SPECIFIC BOXES //
+////////////////////
+// PROFILE
+.profile{
+    background-color: #1d1d1d;
+    padding: 1em;
+    bottom: 1em;
+    border-radius: 0.7em;
+}
+.profile-pic{
+    display: flex;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.info-box {
+    text-align: center;
+}
+
+// text
