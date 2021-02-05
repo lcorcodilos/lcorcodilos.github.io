@@ -8,11 +8,11 @@
 }
 
 body {
-    margin: 0;
+    margin: auto;
     background: #111111;
     color: rgb(188, 188, 188);
     font-family: Montserrat;
-    
+    max-width: 1500px;
 }
 
 a {
@@ -26,12 +26,16 @@ ul {
     padding: 0;
 }
 
+h1 {
+   color:white 
+}
+
 ////////////
 // HEADER //
 ////////////
 header {
     margin: 2em 1em;
-    width: 100%;
+    width: auto;
     display: flex;
 
     .logo {
@@ -51,41 +55,56 @@ header {
 ////////////////////////////
 // WRAPPERS FOR MAIN BODY //
 ////////////////////////////
-.main {
+.page {
     display: flex;
+    flex-direction: row;
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
+    
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    max-width: 1500px;
 }
-
 // WRAPPER FOR LEFT
 .sidebar {
     padding: 0;
     margin: 0;
     display: flex;
-    flex: 0 0 40%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 0 1;
+
 }
 // WRAPPER FOR RIGHT
 .mainbar {
-    display: flex;
     padding: 0;
     margin: 0;
-    flex: 0 0 1;
+    // max-width: ;
+    flex: 3 0 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 // GENERIC BOX
 .box {
     background-color: #1d1d1d;
-    margin: 0 0.7em auto;
+    margin: 0 0.7em 1em;
     padding-left: 1em;
     padding-bottom: 1em;
     padding-right: 1em;
     border-radius: 1em;
+    flex: 0 0 1;
+    height: auto;
 } 
-// Paragraph
-.content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+.empty-box {
+    background-color: #111111;
+    flex: 0 0 1;
+    height: auto;
 }
-////////////////////
-// SPECIFIC BOXES //
-////////////////////
+///////////////////
+// PROFILE BOXES //
+///////////////////
 // PROFILE
 .profile{
     background-color: #1d1d1d;
@@ -94,17 +113,78 @@ header {
     border-radius: 0.7em;
 }
 .profile-pic{
-    display: flex;
-
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 50%;
+    display: block;
 }
 .info-box {
     text-align: center;
 }
+.links {
+    ul {
+        a {
+            font-size: 3em;
+        }
+    }
+}
+.link-buttons{
+    font-size: 2em;
+}
+////////////////////
+// CONTENT BOXES //
+////////////////////
+// Paragraph
+.content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.boxtitle {
+    display: inline;
+    a {
+        h2 {
+            display: inline;
+        }
+    }
+    p {
+        display: inline;
+        font-size: x-large;
+    }
+}
+// Projects
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+.project {
+    flex: 0 0 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .logo {
+        margin: 0.5em;
+        padding: 0;
 
-// text
+        width: 15%;
+        flex: 0 0 1;
+    }
+    .description {
+        flex: 0 0 1;
+        padding: 0 0.5em;
+        margin-top: 0.5em;
+        line-height: 1.5em;
+        li {
+            margin: 0.5em 0;
+        }
+        // margin: 1em 0;
+        
+    }
+}

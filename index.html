@@ -4,24 +4,24 @@
     <meta name="veiwport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Corcodilos</title> 
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
  
   <body> 
 
     <header>
-        <!-- <a href="#" class="logo">Lucas Corcodilos</a> -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="work.html">Professional Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#welcome">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main">
+    <div class="page">
         <div class="sidebar">
             <div class="box">
                 <div class="profile">
@@ -30,15 +30,20 @@
                         <h1>Lucas Corcodilos</h1>
                         <h4>Ph.D. Student in High Energy Particle Physics</h4>
                         <h4>Johns Hopkins University</h4>
+                        <div class="links">
+                            <a href="mailto:corcodilos.lucas@gmail.com" style="font-size: 2em;">&#9993;</a></li>
+                            <a href="https://github.com/lcorcodilos" class="fa fa-github" style="font-size: 2em;"></a>
+                            <a href="https://twitter.com/LucasCorcodilos" class="fa fa-twitter" style="font-size: 2em;"></a>
+                        </div>                       
                     </div>
                 </div>
             </div>
-            
+            <d class="empty-box"></d>
         </div>
 
         <div class="mainbar">
             <div class="box">
-                <div class="welcome">
+                <div class="welcome" id="welcome">
                     <h1>Welcome!</h1>
                     <p class="content">
                         This is my personal webpage where you can find information
@@ -46,14 +51,68 @@
                         of my other hobbies.
                     </p>
                     <p class="content">
-                        I wrote the HTML and CSS for this site from scratch with the assistance of 
-                        the infinite resources of the internet. So if there are bugs, please let me know!
+                        I wrote the HTML and CSS for this site so if there are bugs, please let me know!
                     </p>
                 </div>
-                <div class="projects"></div>
+            </div>
+            <div class="box">
+                <h1>Projects</h1>
+                <div class="projects" id="projects">
+                    <!-- TIMBER -->
+                    <div class="boxtitle">
+                        <a href="https://lcorcodilos.github.io/TIMBER/">
+                            <h2>TIMBER</h2>
+                        </a>
+                        <p> - Lead Developer</p>
+                    </div>
+                    <div class="project">
+                        <img src="https://raw.githubusercontent.com/lcorcodilos/TIMBER/master/doxysetup/logo_clear.png" alt="TIMBER" class="logo">
+                        <p class="description">
+                            <i><b>T</b>ree <b>A</b>nalyzer for <b>M</b>aking <b>B</b>inned <b>E</b>vents in <b>R</b>DataFrame</i>
+                            <br>
+                            This is a description of TIMBER.
+                        </p>
+                    </div>
+                    <!-- 2D Alphabet -->
+                    <div class="boxtitle">
+                        <a href="https://lcorcodilos.github.io/2DAlphabet/">
+                            <h2>2D Alphabet</h2>
+                        </a>
+                        <p> - Lead Developer</p>
+                    </div>
+                    <div class="project">
+                        <ul class="description">
+                            <li>This is a description of 2D Alphabet.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
-            
+            <div class="box" id="education">
+                <h1>Education</h1>
+                <ul>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                    <li>This is an item</li>
+                </ul>
+                
+            </div>
+
+            <div class="box" id="experience">
+                <h1>Experience</h1>
+            </div>
+
         </div>
     </div>
   </body>

@@ -5,10 +5,11 @@
 }
 
 body {
-  margin: 0;
+  margin: auto;
   background: #111111;
   color: #bcbcbc;
   font-family: Montserrat;
+  max-width: 1500px;
 }
 
 a {
@@ -22,9 +23,13 @@ ul {
   padding: 0;
 }
 
+h1 {
+  color: white;
+}
+
 header {
   margin: 2em 1em;
-  width: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,10 +51,24 @@ header ul li a {
   padding: 0 .6em;
 }
 
-.main {
+.page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 1500px;
+}
+
+@media (max-width: 750px) {
+  .page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -58,34 +77,53 @@ header ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1;
+          flex: 1 0 1;
 }
 
 .mainbar {
+  padding: 0;
+  margin: 0;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 1;
+          flex: 3 0 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  margin: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1;
-          flex: 0 0 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .box {
   background-color: #1d1d1d;
-  margin: 0 0.7em auto;
+  margin: 0 0.7em 1em;
   padding-left: 1em;
   padding-bottom: 1em;
   padding-right: 1em;
   border-radius: 1em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  height: auto;
 }
 
-.content {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+.empty-box {
+  background-color: #111111;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  height: auto;
 }
 
 .profile {
@@ -96,19 +134,99 @@ header ul li a {
 }
 
 .profile-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  display: block;
 }
 
 .info-box {
   text-align: center;
+}
+
+.links ul a {
+  font-size: 3em;
+}
+
+.link-buttons {
+  font-size: 2em;
+}
+
+.content {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.boxtitle {
+  display: inline;
+}
+
+.boxtitle a h2 {
+  display: inline;
+}
+
+.boxtitle p {
+  display: inline;
+  font-size: x-large;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.project {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.project .logo {
+  margin: 0.5em;
+  padding: 0;
+  width: 15%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+}
+
+.project .description {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1;
+          flex: 0 0 1;
+  padding: 0 0.5em;
+  margin-top: 0.5em;
+  line-height: 1.5em;
+}
+
+.project .description li {
+  margin: 0.5em 0;
 }
 /*# sourceMappingURL=main.css.map */
