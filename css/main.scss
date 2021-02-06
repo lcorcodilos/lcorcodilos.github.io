@@ -3,6 +3,8 @@
 ///////////
 // SETUP //
 ///////////
+$mobile-page-width: 1000px;
+
 * {
     box-sizing: border-box;
 }
@@ -13,6 +15,9 @@ body {
     color: rgb(188, 188, 188);
     font-family: Montserrat;
     max-width: 1500px;
+    @media (max-width: $mobile-page-width) {
+        max-width: $mobile-page-width;
+    }
 }
 
 a {
@@ -30,6 +35,25 @@ h1 {
    color:white 
 }
 
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.time {
+    font-size: large;
+    font-style: italic;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.institute {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 0.1em;
+    margin-bottom: 0;
+}
+
 ////////////
 // HEADER //
 ////////////
@@ -44,13 +68,16 @@ header {
 
     ul {
         display: flex;
-        li a {
-            padding: 0 .6em;
-        }
         border-bottom: 1px solid white;
         padding-bottom: 1em;
+        li a {
+            padding: 0 .6em;
+            font-size: larger;
+            @media (max-width: mobile-page-width) {
+                font-size: xx-large;
+            }
+        }
     }
-    
 }
 ////////////////////////////
 // WRAPPERS FOR MAIN BODY //
@@ -58,37 +85,40 @@ header {
 .page {
     display: flex;
     flex-direction: row;
-    @media (max-width: 750px) {
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        // scale: 120%;
+    }
+    max-width: 1500px;
+    margin: auto;
+    justify-content: center;
+
+    // WRAPPER FOR LEFT
+    .sidebar {
+        padding: 0;
+        margin: 0;
+        flex: 5 5 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-self: flex-start;
+    }
+    // WRAPPER FOR RIGHT
+    .mainbar {
+        padding: 0;
+        margin: 0;
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
     }
-    
-    // justify-content: flex-start;
-    // align-items: flex-start;
-    max-width: 1500px;
-}
-// WRAPPER FOR LEFT
-.sidebar {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1 0 1;
 
 }
-// WRAPPER FOR RIGHT
-.mainbar {
-    padding: 0;
-    margin: 0;
-    // max-width: ;
-    flex: 3 0 1;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
+
 // GENERIC BOX
 .box {
-    background-color: #1d1d1d;
+    background-color: #272727;
     margin: 0 0.7em 1em;
     padding-left: 1em;
     padding-bottom: 1em;
@@ -96,6 +126,57 @@ header {
     border-radius: 1em;
     flex: 0 0 1;
     height: auto;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    
+    &.profile {
+        justify-content: center;
+    }
+    
+
+    .logo {
+        margin: 1em;
+        padding: 0;
+        flex: 0 0 10%;
+        object-fit:scale-down;
+        width: 100px;
+        
+        &.jhu {
+            filter: brightness(0) invert(1);
+            scale: 80%;
+        }
+        &.timber {
+            width: 15%;
+            margin: 1em;
+            margin-left: 0.5em;
+        }
+    }
+    .boxtitle {
+        display: inline;
+        flex: 0 0 100%;
+        a {
+            h2 {
+                display: inline;
+            }
+        }
+        p {
+            display: inline;
+            font-size: x-large;
+        }
+        h2 {
+            display: inline;
+        }
+    }
+    .description {
+        flex: 0 0 1;
+        padding: 0 0.5em;
+        margin-top: 0.5em;
+        line-height: 1.5em;
+        li {
+            margin: 0.5em 0;
+        }   
+    }
 } 
 .empty-box {
     background-color: #111111;
@@ -105,35 +186,31 @@ header {
 ///////////////////
 // PROFILE BOXES //
 ///////////////////
-// PROFILE
-.profile{
-    background-color: #1d1d1d;
-    padding: 1em;
-    bottom: 1em;
-    border-radius: 0.7em;
-}
 .profile-pic{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    padding: 1em;
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
+    justify-self: center;
 }
 .info-box {
     text-align: center;
+    padding: 1em;
+    margin-top: -2em;
+    justify-self: center;
 }
-.links {
-    ul {
-        a {
-            font-size: 3em;
-        }
+.socials {
+    .social-buttons{
+        font-size: 2em;
     }
 }
-.link-buttons{
-    font-size: 2em;
-}
+
 ////////////////////
 // CONTENT BOXES //
 ////////////////////
@@ -142,49 +219,40 @@ header {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
-.boxtitle {
-    display: inline;
-    a {
-        h2 {
-            display: inline;
-        }
-    }
-    p {
-        display: inline;
-        font-size: x-large;
-    }
-}
+
 // Projects
-.projects {
+.col-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-}
-.project {
-    flex: 0 0 1;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    .logo {
-        margin: 0.5em;
-        padding: 0;
 
-        width: 15%;
+    .row-container {
         flex: 0 0 1;
-    }
-    .description {
-        flex: 0 0 1;
-        padding: 0 0.5em;
-        margin-top: 0.5em;
-        line-height: 1.5em;
-        li {
-            margin: 0.5em 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        img {
+            flex: 0 0 1;
         }
-        // margin: 1em 0;
-        
+        .rows {
+            flex: 0 0 1;
+            h2 {
+                display: block;
+                margin-bottom: 0;
+                padding-bottom: 0.1em;
+                color: white;
+            }
+            h4 {
+                display: block;
+                margin-bottom: 0;
+                padding-bottom: 0.1em;
+            }
+        }
     }
 }
+
+
