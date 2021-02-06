@@ -15,6 +15,7 @@ body {
 @media (max-width: 1000px) {
   body {
     max-width: 1000px;
+    font-size: 2em;
   }
 }
 
@@ -39,18 +40,30 @@ h1 {
   height: 0;
 }
 
-.time {
+.institute-text {
+  font-size: large;
+  font-weight: bold;
+  padding-bottom: 0.1em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  .institute-text {
+    font-size: 1.2em;
+  }
+}
+
+.time-text {
   font-size: large;
   font-style: italic;
   margin-top: 0;
   padding-top: 0;
 }
 
-.institute {
-  font-size: large;
-  font-weight: bold;
-  padding-bottom: 0.1em;
-  margin-bottom: 0;
+@media (max-width: 1000px) {
+  .time-text {
+    font-size: 1.2em;
+  }
 }
 
 header {
@@ -59,10 +72,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-header .logo {
-  font-weight: bold;
 }
 
 header ul {
@@ -75,12 +84,12 @@ header ul {
 
 header ul li a {
   padding: 0 .6em;
-  font-size: larger;
+  font-size: 1.5em;
 }
 
-@media (max-width: mobile-page-width) {
+@media (max-width: 1000px) {
   header ul li a {
-    font-size: xx-large;
+    font-size: 1.1em;
   }
 }
 
@@ -147,7 +156,7 @@ header ul li a {
           flex-direction: column;
 }
 
-.box {
+.card {
   background-color: #272727;
   margin: 0 0.7em 1em;
   padding-left: 1em;
@@ -169,15 +178,43 @@ header ul li a {
           flex-direction: row;
 }
 
-.box.profile {
+@media (max-width: 1000px) {
+  .card {
+    width: 1000px;
+  }
+}
+
+.card h1 {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.card.profile {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.box .logo {
+.card.education {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.card .edu-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+}
+
+.card .logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin: 1em;
   padding: 0;
+  display: block;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10%;
           flex: 0 0 10%;
@@ -186,39 +223,49 @@ header ul li a {
   width: 100px;
 }
 
-.box .logo.jhu {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-  scale: 80%;
+@media (max-width: 1000px) {
+  .card .logo {
+    width: 200px;
+  }
 }
 
-.box .logo.timber {
+.card .logo.jhu {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  padding: 0.4em;
+}
+
+.card .logo.timber {
   width: 15%;
   margin: 1em;
   margin-left: 0.5em;
 }
 
-.box .boxtitle {
+.card .logo.cms {
+  padding: 0.5em 0.7em 0.7em 0.7em;
+}
+
+.card .cardtitle {
   display: inline;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
 }
 
-.box .boxtitle a h2 {
+.card .cardtitle a h2 {
   display: inline;
 }
 
-.box .boxtitle p {
+.card .cardtitle p {
   display: inline;
   font-size: x-large;
 }
 
-.box .boxtitle h2 {
+.card .cardtitle h2 {
   display: inline;
 }
 
-.box .description {
+.card .description {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
@@ -227,7 +274,7 @@ header ul li a {
   line-height: 1.5em;
 }
 
-.box .description li {
+.card .description li {
   margin: 0.5em 0;
 }
 
@@ -240,13 +287,13 @@ header ul li a {
 }
 
 .profile-pic {
-  margin-left: 3em;
-  margin-right: 3em;
-  margin-top: 3em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 2em;
   margin-bottom: 1em;
-  padding: 1em;
-  width: 350px;
-  height: 350px;
+  padding: 0em;
+  width: 23em;
+  height: 23em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -255,12 +302,29 @@ header ul li a {
       justify-self: center;
 }
 
+@media (max-width: 1000px) {
+  .profile-pic {
+    width: 25em;
+    height: 25em;
+  }
+}
+
 .info-box {
   text-align: center;
   padding: 1em;
   margin-top: -2em;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 5em;
+  padding-right: 5em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .socials .social-buttons {
@@ -283,6 +347,7 @@ header ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  margin: 0;
 }
 
 .col-container .row-container {
@@ -310,17 +375,20 @@ header ul li a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
+  margin: 0;
 }
 
 .col-container .row-container .rows {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
+  margin-left: 0.2em;
 }
 
 .col-container .row-container .rows h2 {
   display: block;
   margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 0.1em;
   color: white;
 }

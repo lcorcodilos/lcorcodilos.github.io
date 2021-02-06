@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
   <head>
-    <meta name="veiwport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Corcodilos</title> 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
 
     <div class="page">
         <div class="sidebar">
-            <div class="box profile">
+            <div class="card profile">
                 <img src="images/Lucas_Corcodilos_small.jpg" alt="Me" class="profile-pic">
                 <div class="info-box">
                     <h1>Lucas Corcodilos</h1>
@@ -36,27 +36,27 @@
                     </div>                       
                 </div>
             </div>
-            <div class="box" id="education">
-                <div class="boxtitle"><h1>Education</h1></div>
+            <div class="card education" id="education">
+                <div class="cardtitle"><h1>Education</h1></div>
                 <img src="images/jhu.png" alt="JHU" class="logo jhu">
-                <div>
-                    <p class="institute">Johns Hopkins University</p>
-                    <p class="time">2016 - Current</p>
-                    <p style="font-size: large;">Ph.D. Particle Physics (in progress)</p>
-                    <p style="font-size: large;">M.S. Physics</p>
+                <div class="edu-item">
+                    <p class="institute-text">Johns Hopkins University</p>
+                    <p class="time-text">2016 - Current</p>
+                    <p class="degree">Ph.D. Particle Physics (in progress)<br>M.S. Physics</p>
                 </div>
                 <div class="break"></div>
                 <img src="images/ru.png" alt="RU" class="logo">
-                <div>
-                    <p class="institute">Rutgers University</p>
-                    <p class="time">2012 - 2016</p>
-                    <p style="font-size: large;">B.S. Physics</p>
+                <div class="edu-item">
+                    <p class="institute-text">Rutgers University</p>
+                    <p class="time-text">2012 - 2016</p>
+                    <p class="degree">B.S. Physics</p>
                 </div>
             </div>
+            <div class="empty-box"></div>
         </div>
 
         <div class="mainbar">
-            <div class="box" id="welcome">
+            <div class="card" id="welcome">
                 <div class="welcome">
                     <h1>Welcome!</h1>
                     <p class="content">
@@ -69,7 +69,7 @@
                     </p>
                 </div>
             </div>
-            <div class="box" id="projects">
+            <div class="card" id="projects">
                 <h1>Projects</h1>
                 <div class="col-container">
                     <!-- TIMBER -->
@@ -79,7 +79,7 @@
                             <h2><a href="https://lcorcodilos.github.io/TIMBER/">
                                 TIMBER
                             </a></h2>
-                            <div class="time">Lead Developer</div>
+                            <div class="time-text">Lead Developer</div>
                             <div class="description">
                                 This is a description of TIMBER.
                             </div>
@@ -92,7 +92,7 @@
                             <h2><a href="https://lcorcodilos.github.io/2DAlphabet/">
                                 2D Alphabet
                             </a></h2> 
-                            <div class="time">Lead Developer</div>
+                            <div class="time-text">Lead Developer</div>
                             <div class="description">
                                 This is a description of 2D Alphabet.
                             </div>
@@ -102,31 +102,31 @@
                 </div>
             </div>
 
-            <div class="box" id="experience">
+            <div class="card" id="experience">
                 <h1>Research Experience</h1>
                 <div class="col-container">
                     <div class="row-container">
-                        <img src="images/cms.png" alt="CMS" class="logo">
+                        <img src="images/cms.png" alt="CMS" class="logo cms">
                         <div class="rows">
-                            <h2>Analysis Lead in CMS experimental result</h2>
-                            <p class="time">2016 - Current</p>
+                            <h2>Analysis Lead</h2>
+                            <p class="time-text">2016 - Current</p>
                             <p class="description">Details here.</p>
 
                             <h2>Statistics Software Contact</h2>
-                            <p class="time">Fall 2019 - Current</p>
+                            <p class="time-text">Fall 2019 - Current</p>
                             <p class="description">Details here.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="box" id="teaching">
+            <div class="card" id="teaching">
                 <h1>Teaching Experience</h1>
                 <div class="col-container">
                     <div class="row-container">
-                        <img src="images/cms.png" alt="CMS" class="logo">
+                        <img src="images/cms.png" alt="CMS" class="logo cms">
                         <div class="rows">
                             <h2>Long Exercise Facilatator for CMS Data Analysis School</h2>
-                            <p class="time">Fall 2020, Early 2021</p>
+                            <p class="time-text">Fall 2020, Early 2021</p>
                             <p class="description">Help to lead a week-long group exercise where students who are new to CMS data analysis
                                 must work together to recreate (and possibly improve) the analysis for which I am the
                                 lead. Helped to edit and provide approachable python code, gave presentations explaining
@@ -139,15 +139,15 @@
                         <img src="images/jhu.png" alt="JHU" class="logo jhu">
                         <div class="rows">
                             <h2>Classical Mechanics (Freshman physics majors)</h2>
-                            <p class="time">Every Fall from 2017 to 2020</p>
+                            <p class="time-text">Every Fall from 2017 to 2020</p>
                             <p class="description"></p>
 
                             <h2>General Physics Lecture and Lab</h2>
-                            <p class="time">Fall 2016, Spring 2017</p>
+                            <p class="time-text">Fall 2016, Spring 2017</p>
                             <p class="description"></p>
 
                             <h2>Physics Outreach with Virtual Reality</h2>
-                            <p class="time">Spring 2018, 2019</p>
+                            <p class="time-text">Spring 2018, 2019</p>
                             <p class="description">
                                 Using personal hardware (PC + HTC Vive), provided a virtual reality
                                 exhibit at the annual JHU Physics Fair which is free and open to the
