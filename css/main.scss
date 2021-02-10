@@ -146,7 +146,7 @@ header {
     }
     
     h1 {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.2em;
         margin-top: 0.5em;
     }
 
@@ -190,8 +190,9 @@ header {
         }
         &.timber {
             width: 5em;
-            margin-top: -0.5em;
-            margin-left: 0.2em;
+            margin-top: 0;
+            margin-bottom: -1em;
+            margin-top: -2em;
             margin-right: 1em;
             @media (max-width: $mobile-page-width) {     
                 display: none;
