@@ -193,6 +193,9 @@ header {
             margin-top: -0.5em;
             margin-left: 0.2em;
             margin-right: 1em;
+            @media (max-width: $mobile-page-width) {     
+                display: none;
+            }
         }
         &.cms {
             padding: 0.5em 0.7em 0.7em 0.7em;
