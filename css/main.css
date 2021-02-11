@@ -207,6 +207,41 @@ header ul li a {
       align-self: flex-start;
 }
 
+.card.skills {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card.skills i {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.card.skills i:first-child {
+  margin-top: 0;
+}
+
+.card ul {
+  display: block;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-bottom: 1em;
+}
+
+.card ul li {
+  margin-left: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-left: solid white 1px;
+}
+
+.card .hobbies li {
+  padding-bottom: 0.7em;
+}
+
 .card .edu-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 30%;
@@ -281,17 +316,10 @@ header ul li a {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
-  padding: 0 0.5em;
+  padding: 0;
   margin-top: 0.5em;
   margin-bottom: 0.7em;
   line-height: 1.5em;
-}
-
-.card .description ul {
-  margin: 0.5em 0;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: solid 1px white;
 }
 
 .empty-box {

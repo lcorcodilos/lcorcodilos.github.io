@@ -159,6 +159,38 @@ header {
         align-self: flex-start;
     }
 
+    &.skills {
+        i {
+            margin-bottom: 0.5em;
+            margin-top: 1em;
+        }
+        i:first-child {
+            margin-top: 0;
+        }
+        flex-direction: column;
+        
+        
+    }
+    ul{
+        display:block;
+        justify-content:left;
+        margin-bottom: 1em;
+        // flex-wrap: wrap;
+        // flex-direction: row;
+        
+        li {
+            margin-left: 0.5em;
+            padding-left: 1em;
+            padding-right: 1em;
+            border-left: solid white 1px;
+        }
+    }
+    .hobbies {
+        li {
+            padding-bottom: 0.7em;
+        }
+    }
+
     .edu-item {
         flex: 1 0 30%;
         // .degree {
@@ -223,16 +255,16 @@ header {
     }
     .description {
         flex: 0 0 1;
-        padding: 0 0.5em;
+        padding: 0;// 0.5em;
         margin-top: 0.5em;
         margin-bottom: 0.7em;
         line-height: 1.5em;
-        ul {
-            margin: 0.5em 0;
-            margin-left: 1em;
-            padding-left: 1em;
-            border-left: solid 1px white;
-        }  
+        // ul {
+        //     margin: 0.5em 0;
+        //     margin-left: 1em;
+        //     padding-left: 1em;
+        //     border-left: solid 1px white;
+        // }  
     }
 } 
 .empty-box {
