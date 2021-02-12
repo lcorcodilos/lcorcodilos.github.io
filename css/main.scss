@@ -3,8 +3,8 @@
 ///////////
 // SETUP //
 ///////////
-$mobile-page-width: 1000px;
-$mobile-font-size: 2em;
+$mobile-page-width: 500px;
+$mobile-font-size: 1.1em;
 $background-color: #111111;
 $font-color: rgb(188, 188, 188);
 $header-font-size: 1.5em;
@@ -53,9 +53,9 @@ h1 {
     font-weight: bold;
     padding-bottom: 0.1em;
     margin-bottom: 0;
-    @media (max-width: $mobile-page-width) {
-        font-size: 0.6*$mobile-font-size;
-    }
+    // @media (max-width: $mobile-page-width) {
+    //     font-size: $mobile-font-size;
+    // }
 }
 
 .time-text {
@@ -63,9 +63,9 @@ h1 {
     font-style: italic;
     margin-top: 0;
     padding-top: 0;
-    @media (max-width: $mobile-page-width) {
-        font-size: 0.6*$mobile-font-size;
-    }
+    // @media (max-width: $mobile-page-width) {
+    //     font-size: 0.8*$mobile-font-size;
+    // }
 }
 
 ////////////
@@ -75,18 +75,35 @@ header {
     margin: 2em 1em;
     width: auto;
     display: flex;
+    @media (max-width:$mobile-page-width) {
+        max-width: $mobile-page-width;
+    }
 
     ul {
         display: flex;
+        flex-direction: row;
         border-bottom: 1px solid white;
         padding-bottom: 1em;
+        justify-content: space-between;
+        max-width: 600px;
+        width: 90vw;
+        
         li a {
-            padding: 0 .6em;
+            // padding: 0 .6em;
+            margin: auto;
+            flex: 4 0 auto;
+            // flex-wrap: nowrap;
             font-size: $header-font-size;
             font-style: normal;
             text-decoration: none;
-            @media (max-width: $mobile-page-width) {
-                font-size:1.1em;
+            
+        }
+        @media (max-width: $mobile-page-width) {
+            padding-bottom: 0.7em;
+            max-width: 90vw;
+            li a {
+                font-size:0.9em;
+                padding: 0;
             }
         }
     }
@@ -142,7 +159,7 @@ header {
     flex-wrap:wrap;
     flex-direction: row;
     @media (max-width:$mobile-page-width) {
-        width: $mobile-page-width;
+        max-width: $mobile-page-width;
     }
     
     h1 {
@@ -206,9 +223,9 @@ header {
         display: block;
         flex: 0 0 10%;
         object-fit:scale-down;
-        width: 100px;
+        width: 6em;
         @media (max-width: $mobile-page-width) {
-            width: 200px;
+            margin: 0.6em;
         }
         
         &.jhu {
@@ -219,6 +236,11 @@ header {
             // padding-top: 0.4em;
             padding: 0.4em;
             @media (max-width: $mobile-page-width) {
+                &.teaching {
+                    @media (max-width: $mobile-page-width) {
+                        display: none;
+                    }
+                }
             }
         }
         &.timber {
@@ -233,9 +255,9 @@ header {
         }
         &.cms {
             padding: 0.5em 0.7em 0.7em 0.7em;
-            @media (max-width: $mobile-page-width) {               
+            @media (max-width: $mobile-page-width) {      
+                display: none;         
             }
-            
         }
     }
     .cardtitle {
@@ -267,6 +289,18 @@ header {
         //     border-left: solid 1px white;
         // }  
     }
+
+    &.welcome {
+        @media (max-width: $mobile-page-width) {
+            display: none;
+        }
+    }
+    &.mobile-welcome {
+        display: none;
+        @media (max-width: $mobile-page-width) {
+            display: block;
+        }
+    }
 } 
 .empty-box {
     background-color: #111111;
@@ -285,8 +319,8 @@ header {
     width: 23em;
     height: 23em;
     @media (max-width: $mobile-page-width) {
-        width: 25em;
-        height: 25em;
+        width: 17em;
+        height: 17em;
     }
     
     object-fit: cover;
