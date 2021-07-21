@@ -97,6 +97,10 @@ header ul li a {
   text-decoration: none;
 }
 
+header ul li:last-child a {
+  padding: 0 1em 0 0;
+}
+
 @media (max-width: 500px) {
   header ul {
     padding-bottom: 0.7em;

@@ -95,8 +95,10 @@ header {
             // flex-wrap: nowrap;
             font-size: $header-font-size;
             font-style: normal;
-            text-decoration: none;
-            
+            text-decoration: none; 
+        }
+        li:last-child a {
+            padding: 0 1em 0 0;
         }
         @media (max-width: $mobile-page-width) {
             padding-bottom: 0.7em;
