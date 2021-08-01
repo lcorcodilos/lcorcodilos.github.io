@@ -84,10 +84,10 @@ header ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 600px;
-  width: 90vw;
 }
 
 header ul li a {
+  padding: 0 1em 0 1em;
   margin: auto;
   -webkit-box-flex: 4;
       -ms-flex: 4 0 auto;
@@ -95,6 +95,11 @@ header ul li a {
   font-size: 1.5em;
   font-style: normal;
   text-decoration: none;
+}
+
+header ul li:first-child a {
+  padding: 0 1em 0 0em;
+  /* border-left: none; */
 }
 
 @media (max-width: 500px) {
