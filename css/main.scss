@@ -5,10 +5,10 @@
 ///////////
 $mobile-page-width: 500px;
 $mobile-font-size: 1.1em;
-$background-color: #111111;
-$font-color: rgb(188, 188, 188);
+$background-color: rgb(240, 240, 240);
+$font-color: #464646;
 $header-font-size: 1.5em;
-$card-color: #272727;
+$card-color: rgb(255, 255, 255);
 
 * {
     box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
 }
 
 a {
-    color: white;
+    color: $font-color;
     text-decoration: none;
     font-style: italic;
     text-decoration: underline;
@@ -40,7 +40,7 @@ ul {
 }
 
 h1 {
-   color: white;
+   color: $font-color;
 }
 
 .break {
@@ -82,7 +82,7 @@ header {
     ul {
         display: flex;
         flex-direction: row;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid $font-color;
         padding-bottom: 1em;
         justify-content: space-between;
         max-width: 600px;
@@ -94,18 +94,24 @@ header {
             font-size: $header-font-size;
             font-style: normal;
             text-decoration: none;
+            // text-shadow: 0px 1px 2px #888888;
             // border-left: 1px solid white;
         }
         li:first-child a {
             padding: 0 1em 0 0em;
             border-left: none;
         }
+
+        li a:hover {
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+        }
+
         @media (max-width: $mobile-page-width) {
             padding-bottom: 0.7em;
             max-width: 90vw;
+            font-size: 80%;
             li a {
-                font-size:0.9em;
-                padding: 0;
+                padding: 1em;
             }
         }
     }
@@ -149,7 +155,8 @@ header {
 
 // GENERIC BOX
 .card {
-    background-color: #272727;
+    background-color: $card-color;
+    box-shadow: 0px 1px 5px #888888;
     margin: 0 0.7em 1em;
     padding-left: 1em;
     padding-bottom: 1em;
@@ -166,7 +173,7 @@ header {
     
     h1 {
         margin-bottom: 0.2em;
-        margin-top: 0.5em;
+        margin-top: 0.7em;
     }
 
     &.profile {
@@ -194,15 +201,22 @@ header {
         display:block;
         justify-content:left;
         margin-bottom: 1em;
+        margin-top: 0.5em;
+        padding-top: 0em;
         // flex-wrap: wrap;
         // flex-direction: row;
         
         li {
             margin-left: 0.5em;
-            padding-left: 1em;
+            padding-left: 3em;
             padding-right: 1em;
             padding-top: 0.5em;
-            border-left: solid white 1px;
+            border-left: solid $font-color 1px;
+            text-indent: -2em;
+            margin-left: 1em;
+        }
+        li:first-child {
+            padding-top: 0em;
         }
     }
     .hobbies {
@@ -231,7 +245,7 @@ header {
         }
         
         &.jhu {
-            filter: brightness(0) invert(1);
+            // filter: brightness(0) invert(1);
             // scale: 80%;
             // padding-left: 1em;
             // padding-right: 1em;
@@ -249,7 +263,7 @@ header {
             width: 5em;
             margin-top: 0;
             margin-bottom: -1em;
-            margin-top: -2em;
+            margin-top: -3em;
             margin-right: 1em;
             @media (max-width: $mobile-page-width) {     
                 display: none;
@@ -292,20 +306,20 @@ header {
         // }  
     }
 
-    &.welcome {
-        @media (max-width: $mobile-page-width) {
-            display: none;
-        }
-    }
-    &.mobile-welcome {
-        display: none;
-        @media (max-width: $mobile-page-width) {
-            display: block;
-        }
-    }
-} 
+    // &.welcome {
+    //     line-height: 1.5em;
+    //     @media (max-width: $mobile-page-width) {
+    //         display: block;
+    //     }
+    // }
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
 .empty-box {
-    background-color: #111111;
+    background-color: $card-color;
     flex: 0 0 1;
     height: auto;
 }
@@ -357,7 +371,7 @@ header {
         // margin-top: 0.7em;
         padding-right: 1em;
         padding-left: 1em;
-        border-left: 1px solid white;
+        border-left: 1px solid $font-color;
         text-decoration: none;
         font-style:normal;
     }
@@ -373,6 +387,7 @@ header {
 ////////////////////
 // Paragraph
 .content {
+    margin-top: 1em;
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
@@ -406,7 +421,7 @@ header {
                 margin-bottom: 0;
                 margin-top: 0;
                 padding-bottom: 0.1em;
-                color: white;
+                color: $font-color;
             }
             h4 {
                 display: block;

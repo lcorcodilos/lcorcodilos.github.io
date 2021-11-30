@@ -6,8 +6,8 @@
 
 body {
   margin: auto;
-  background: #111111;
-  color: #bcbcbc;
+  background: #f0f0f0;
+  color: #464646;
   font-family: Montserrat;
   max-width: 1500px;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  color: white;
+  color: #464646;
   text-decoration: none;
   font-style: italic;
   text-decoration: underline;
@@ -33,7 +33,7 @@ ul {
 }
 
 h1 {
-  color: white;
+  color: #464646;
 }
 
 .break {
@@ -78,7 +78,7 @@ header ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #464646;
   padding-bottom: 1em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -99,17 +99,21 @@ header ul li a {
 
 header ul li:first-child a {
   padding: 0 1em 0 0em;
-  /* border-left: none; */
+  border-left: none;
+}
+
+header ul li a:hover {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 500px) {
   header ul {
     padding-bottom: 0.7em;
     max-width: 90vw;
+    font-size: 80%;
   }
   header ul li a {
-    font-size: 0.9em;
-    padding: 0;
+    padding: 1em;
   }
 }
 
@@ -177,7 +181,9 @@ header ul li:first-child a {
 }
 
 .card {
-  background-color: #272727;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 5px #888888;
+          box-shadow: 0px 1px 5px #888888;
   margin: 0 0.7em 1em;
   padding-left: 1em;
   padding-bottom: 1em;
@@ -206,7 +212,7 @@ header ul li:first-child a {
 
 .card h1 {
   margin-bottom: 0.2em;
-  margin-top: 0.5em;
+  margin-top: 0.7em;
 }
 
 .card.profile {
@@ -245,14 +251,22 @@ header ul li:first-child a {
       -ms-flex-pack: left;
           justify-content: left;
   margin-bottom: 1em;
+  margin-top: 0.5em;
+  padding-top: 0em;
 }
 
 .card ul li {
   margin-left: 0.5em;
-  padding-left: 1em;
+  padding-left: 3em;
   padding-right: 1em;
   padding-top: 0.5em;
-  border-left: solid white 1px;
+  border-left: solid #464646 1px;
+  text-indent: -2em;
+  margin-left: 1em;
+}
+
+.card ul li:first-child {
+  padding-top: 0em;
 }
 
 .card .hobbies li {
@@ -286,8 +300,6 @@ header ul li:first-child a {
 }
 
 .card .logo.jhu {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
   padding: 0.4em;
 }
 
@@ -301,7 +313,7 @@ header ul li:first-child a {
   width: 5em;
   margin-top: 0;
   margin-bottom: -1em;
-  margin-top: -2em;
+  margin-top: -3em;
   margin-right: 1em;
 }
 
@@ -351,24 +363,13 @@ header ul li:first-child a {
   line-height: 1.5em;
 }
 
-@media (max-width: 500px) {
-  .card.welcome {
-    display: none;
-  }
-}
-
-.card.mobile-welcome {
-  display: none;
-}
-
-@media (max-width: 500px) {
-  .card.mobile-welcome {
-    display: block;
-  }
+.card:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .empty-box {
-  background-color: #111111;
+  background-color: white;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
@@ -438,7 +439,7 @@ header ul li:first-child a {
   margin-left: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border-left: 1px solid white;
+  border-left: 1px solid #464646;
   text-decoration: none;
   font-style: normal;
 }
@@ -449,6 +450,7 @@ header ul li:first-child a {
 }
 
 .content {
+  margin-top: 1em;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
@@ -508,7 +510,7 @@ header ul li:first-child a {
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 0.1em;
-  color: white;
+  color: #464646;
 }
 
 .col-container .row-container .rows h4 {
