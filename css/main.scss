@@ -39,8 +39,32 @@ ul {
     padding: 0;
 }
 
-h1 {
+.termlist {
+    list-style: none;
+    margin-left: 4em;
+}
+
+.termitem {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.termitem:before {
+    list-style-position: outside;
+    font-family: 'FontAwesome';
+    content: '\f120';
+    margin-left: -2em;
+    margin-right: 0.8em;
+    color: $font-color;
+}
+
+h2 {
    color: $font-color;
+   font-weight: bold;
+}
+h3 {
+    color: $font-color;
+    font-size: x-large;
 }
 
 .break {
@@ -68,6 +92,10 @@ h1 {
     // }
 }
 
+.fa-thin {
+    -webkit-text-stroke: 3px $background-color;
+}
+
 ////////////
 // HEADER //
 ////////////
@@ -87,35 +115,51 @@ header {
         justify-content: space-between;
         max-width: 600px;
         
-        li a {
-            padding: 0 1em 0 1em;
-            margin: auto;
-            flex: 4 0 auto;
-            font-size: $header-font-size;
-            font-style: normal;
-            text-decoration: none;
-            // text-shadow: 0px 1px 2px #888888;
-            // border-left: 1px solid white;
-        }
-        li:first-child a {
+        li:first-child {
             padding: 0 1em 0 0em;
             border-left: none;
-        }
-
-        li a:hover {
-            text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
         }
 
         @media (max-width: $mobile-page-width) {
             padding-bottom: 0.7em;
             max-width: 90vw;
             font-size: 80%;
-            li a {
+            li {
                 padding: 1em;
             }
         }
     }
 }
+
+.navitem-text {
+    padding: 0 1em 0 1em;
+    margin: auto;
+    flex: 4 0 auto;
+    font-size: $header-font-size;
+    font-style: normal;
+    text-decoration: none;
+    color: $font-color;
+}
+.navitem-text:hover {
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    color: $font-color;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+.dropdown-item {
+    @extend .navitem-text;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+
 ////////////////////////////
 // WRAPPERS FOR MAIN BODY //
 ////////////////////////////
@@ -129,55 +173,57 @@ header {
     max-width: 1500px;
     margin: auto;
     justify-content: center;
+}
 
-    // WRAPPER FOR LEFT
-    .sidebar {
-        padding: 0;
-        margin: 0;
-        flex: 5 5 auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-self: flex-start;
-    }
-    // WRAPPER FOR RIGHT
-    .mainbar {
-        padding: 0;
-        margin: 0;
-        flex: 1 1 auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
+// WRAPPER FOR LEFT
+.sidebar {
+    padding: 0;
+    margin: 0;
+    flex: 5 5 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+}
 
+// WRAPPER FOR RIGHT
+.mainbar {
+    padding: 0;
+    margin: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 // GENERIC BOX
 .card {
     background-color: $card-color;
     box-shadow: 0px 1px 5px #888888;
-    margin: 0 0.7em 1em;
+    margin: 0 1em 1em;
     padding-left: 1em;
     padding-bottom: 1em;
     padding-right: 1em;
     border-radius: 1em;
     flex: 0 0 1;
     height: auto;
-    display: flex;
+    display: block;
     flex-wrap:wrap;
     flex-direction: row;
     @media (max-width:$mobile-page-width) {
         max-width: $mobile-page-width;
     }
     
-    h1 {
+    h2 {
         margin-bottom: 0.2em;
         margin-top: 0.7em;
     }
 
     &.profile {
+        display: flex;
         justify-content: center;
+        min-width: fit-content;
     }
     
     &.education {
@@ -197,7 +243,7 @@ header {
         
         
     }
-    ul{
+    .linelist {
         display:block;
         justify-content:left;
         margin-bottom: 1em;
@@ -219,17 +265,15 @@ header {
             padding-top: 0em;
         }
     }
-    .hobbies {
-        li {
-            padding-bottom: 0.7em;
-        }
-    }
 
     .edu-item {
-        flex: 1 0 30%;
-        // .degree {
-        //     font-size: ;
-        // }
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        white-space: nowrap;
+        div p {
+            margin-bottom: 0em;
+        }
     }
 
     .logo {
@@ -259,12 +303,13 @@ header {
                 }
             }
         }
-        &.timber {
-            width: 5em;
-            margin-top: 0;
-            margin-bottom: -1em;
-            margin-top: -3em;
-            margin-right: 1em;
+        &.project {
+            height: 2.5em;
+            margin: 0;
+            // margin-top: 0;
+            // margin-bottom: -0.5em;
+            // margin-top: -0.3em;
+            // margin-right: 1em;
             @media (max-width: $mobile-page-width) {     
                 display: none;
             }
@@ -276,46 +321,26 @@ header {
             }
         }
     }
-    .cardtitle {
-        display: inline;
-        flex: 0 0 100%;
-        a {
-            h2 {
-                display: inline;
-            }
-        }
-        p {
-            display: inline;
-            font-size: x-large;
-        }
-        h2 {
-            display: inline;
-        }
-    }
     .description {
         flex: 0 0 1;
         padding: 0;// 0.5em;
         margin-top: 0.5em;
         margin-bottom: 0.7em;
         line-height: 1.5em;
-        // ul {
-        //     margin: 0.5em 0;
-        //     margin-left: 1em;
-        //     padding-left: 1em;
-        //     border-left: solid 1px white;
-        // }  
     }
 
-    // &.welcome {
-    //     line-height: 1.5em;
-    //     @media (max-width: $mobile-page-width) {
-    //         display: block;
-    //     }
-    // }
 }
 
 .card:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.basedrop {
+    // @extend .card;
+    margin: 0em;
+    margin-bottom: 1em;
+    padding: 0em;
+    border-radius: 0.5em;
 }
 
 .empty-box {
@@ -332,8 +357,8 @@ header {
     margin-top: 2em;
     margin-bottom: 1em;
     padding: 0em;
-    width: 23em;
-    height: 23em;
+    width: 17em;
+    height: 17em;
     @media (max-width: $mobile-page-width) {
         width: 17em;
         height: 17em;
@@ -349,87 +374,52 @@ header {
     padding: 1em;
     margin-top: -2em;
     justify-self: center;
+    white-space: nowrap;
 }
 .socials {
     display: flex;
     padding-left: 5em;
     padding-right: 5em;
     justify-content: space-around;
-    .social-buttons{
-        font-size: 2em;
-        text-decoration: none;
-        font-style: normal;
-    }
 }
 
-.project-link-title {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    a {
-        margin-left: 0;
-        // margin-top: 0.7em;
-        padding-right: 1em;
-        padding-left: 1em;
-        border-left: 1px solid $font-color;
-        text-decoration: none;
-        font-style:normal;
+.social-buttons{
+    font-size: 2em;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.project-links {
+    display: block;
+    float:left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    li {
+        width: 100%;
+        border-bottom: 1px solid #dee2e6;
+        // margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+        padding-top: 0.7em;
+
+        a {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            font-style: normal;
+            font-size: large;
+        }
+
     }
-    h2 {
+    li:first-child {
+        border-top: none;
+        padding-top: 0em;
+    }
+
+    h3 {
         padding-right: 1em;
         border-left: none
     }
     
 }
-
-////////////////////
-// CONTENT BOXES //
-////////////////////
-// Paragraph
-.content {
-    margin-top: 1em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-// Projects
-.col-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-
-    .row-container {
-        flex: 0 0 1;
-        margin: 0;
-        margin-top: 1em;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        img {
-            flex: 0 0 1;
-            margin: 0;
-        }
-        .rows {
-            flex: 0 0 1;
-            margin-left: 0.2em;
-            h2 {
-                display: block;
-                margin-bottom: 0;
-                margin-top: 0;
-                padding-bottom: 0.1em;
-                color: $font-color;
-            }
-            h4 {
-                display: block;
-                margin-bottom: 0;
-                padding-bottom: 0.1em;
-            }
-        }
-    }
-}
-
-

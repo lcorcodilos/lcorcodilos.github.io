@@ -1,0 +1,12 @@
+<div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapse{{ pkg.ID }}">
+        {% block dropdown_header %}
+        {% endblock dropdown_header %}
+    </button>
+
+    <div id="collapse{{ pkg.ID }}" class="collapse">
+        {% block dropdown_content %}
+        {% endblock dropdown_content %}
+    </div>
+
+</div>

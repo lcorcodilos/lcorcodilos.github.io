@@ -1,0 +1,12 @@
+<div class="w-100 mb-4">
+    {% if pkg.header != '' %}
+        <p class='border-bottom text-black'>{{ pkg.header }}</p>
+    {% endif %}
+    <ul class="termlist">
+        {% for item in pkg.items %}
+            <li class="termitem">
+                {{ item }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+<img src="{{ card.image }}" alt="Me" class="profile-pic">
+<div class="info-box">
+    <h2 class="pb-1 mb-2 border-bottom">{{ card.header }}</h2>
+    {% for title in card.titles %}
+        <h5>{{ title }}</h5>
+    {% endfor %}
+    
+    <div class="socials mt-4">
+        {% for social_name, fa_name in [('email', 'fa-envelope'), ('github', 'fa-github'), ('twitter', 'fa-twitter')] %}
+            <a href="{{ card.social_links[social_name] }}" class="fa {{ fa_name }} social-buttons"></a>
+        {% endfor %}
+    </div>                       
+</div>

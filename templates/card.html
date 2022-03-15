@@ -1,0 +1,29 @@
+<div class="card {{ card.classname }}" id="{{ card.ID }}">
+    {% if card.classname == 'profile' %}
+        {% include 'card_profile.html' %}
+
+    {% else %}
+        <h2 class='mb-3'>{{ card.header }}</h2>
+
+        {% if card.classname == 'edu' %}
+            {% include 'card_edu.html' %}
+
+        {% elif card.classname == 'skills' %}
+            {% include 'card_skills.html' %}
+
+        {% else %}
+            <div class="description">
+                {% for c in card.content %}
+                    {% with pkg=c %}
+                        {% include '%s.html'%pkg.classname %}
+                    {% endwith %}
+                    
+                {% endfor %}
+            </div>
+
+        {% endif %}
+
+        
+    {% endif %}
+
+</div>

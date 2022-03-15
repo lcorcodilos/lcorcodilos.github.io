@@ -1,0 +1,8 @@
+{% for skill_name, skill_list in card.skills %}
+    <h3 class='ms-2'>{{ skill_name }}</h3>
+    <ul class="linelist mb-4">
+        {% for skill in skill_list %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

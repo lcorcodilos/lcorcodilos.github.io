@@ -2,345 +2,975 @@
 <html lang="en"> 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Corcodilos</title> 
-    <link rel="stylesheet" href="css/main.css">
+    <title>Lucas Corcodilos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
  
   <body> 
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="images/resume.pdf">R&eacutesum&eacute</a></li>
-                <li><a href="http://lucascorcodilos.com/blog/">Blog</a></li>
-                <li><a href="http://lucascorcodilos.com/RecipeRepo/">RecipeRepo</a></li>
-                <!-- <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#education">Education</a></li>
-                <li><a href="index.html#experience">Experience</a></li> -->
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a class="navitem-text" href="index.html">Home</a></li>
+            <li><a class="navitem-text" href="images/resume.pdf">R&eacutesum&eacute</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="btn navitem-text" type="button" id="projectMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects <span><i class="fa fa-thin fa-chevron-down"></i></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="projectMenuButton">
+                        <a class="dropdown-item" href="http://lucascorcodilos.com/blog/">Blog</a>
+                        <a class="dropdown-item" href="http://lucascorcodilos.com/RecipeRepo/">RecipeRepo</a>
+                        <a class="dropdown-item" href="https://jobs.lucascorcodilos.com">Job App Manager</a>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
 
     <div class="page">
         <div class="sidebar">
-            <div class="card profile">
-                <img src="images/Lucas_Corcodilos_small.jpg" alt="Me" class="profile-pic">
-                <div class="info-box">
-                    <h1>Lucas Corcodilos</h1>
-                    <h4>Ph.D. in Experimental High Energy Particle Physics<br>Johns Hopkins University</h4>
-                    <h4 style="margin-top: 0;">CMS Collaboration Member</h4>
-                    <div class="socials">
-                        <a href="mailto:corcodilos.lucas@gmail.com" class="fa fa-envelope social-buttons"></a>
-                        <a href="https://github.com/lcorcodilos" class="fa fa-github social-buttons"></a>
-                        <a href="https://twitter.com/LucasCorcodilos" class="fa fa-twitter social-buttons"></a>
-                    </div>                       
-                </div>
-            </div>
-            <div class="card education" id="education">
-                <div class="cardtitle"><h1>Education</h1></div>
-                <img src="images/jhu.png" alt="JHU" class="logo jhu">
-                <div class="edu-item">
-                    <p class="institute-text">Johns Hopkins University</p>
-                    <p class="time-text">Sept 2016 - Dec 2021</p>
-                    <p class="degree">Ph.D. Particle Physics<br>M.S. Physics</p>
-                </div>
-                <div class="break"></div>
-                <img src="images/ru.png" alt="RU" class="logo">
-                <div class="edu-item">
-                    <p class="institute-text">Rutgers University</p>
-                    <p class="time-text">2012 - 2016</p>
-                    <p class="degree">B.S. Physics</p>
-                </div>
-            </div>
-            <div class="card skills" id="skills">
-                <div class="cardtitle"><h1>Technical Skills</h1></div>
-                    <i>+5 years</i>
-                    <ul>
-                        <li>Python</li>
-                        <li>Unix system tools (ssh, grep, sed, etc)</li>
-                        <li>LaTeX</li>
-                        <li>CERN ROOT</li>
-                        <li>Batch processing on remote clusters</li>
-                            <li style="margin-left: 1em; border-left: none;">(HTCondor, CRAB)</li>
-                    </ul>
+    
+        <div class="card profile" id="profile">
+    
+        <img src="images/Lucas_Corcodilos_small.jpg" alt="Me" class="profile-pic">
+<div class="info-box">
+    <h2 class="pb-1 mb-2 border-bottom">Lucas Corcodilos</h2>
+    
+        <h5>Data Scientist</h5>
+    
+        <h5>Ph.D. Experimental Particle Physics</h5>
+    
+        <h5>Former CMS Collaboration Member</h5>
+    
+    
+    <div class="socials mt-4">
+        
+            <a href="" class="fa fa-envelope social-buttons"></a>
+        
+            <a href="https://github.com/lcorcodilos" class="fa fa-github social-buttons"></a>
+        
+            <a href="https://twitter.com/LucasCorcodilos" class="fa fa-twitter social-buttons"></a>
+        
+    </div>                       
+</div>
 
-                    <i>+2 years</i>
-                    <ul>
-                        <li>C++</li>
-                        <li>Statistical analysis</li>
-                        <li>Git (GitHub, GitLab)</li>
-                        <li>Parallel computing</li>
-                        <li>Inline documentation tools (Doxygen, Sphinx)</li>
-                    </ul>
+    
 
-                    <i>+1 year</i>
-                    <ul>
-                        <li>Machine learning</li>
-                        <li>TensorFlow/Keras, scikit-learn, pandas</li>
-                        <li>Home server management</li>
-                        <li>HTML and SCSS</li>
-                    </ul>
-                    
-            </div>
-            <!-- <div class="card skills" id="skills">
-                <div class="cardtitle"><h1>Hobbies</h1></div>
-                    <ul class="hobbies">
-                        <li>Cooking and learning about food science</li>
-                        <li>Gardening</li>
-                        <li>Building computers</li>
-                        <li>Running a home server</li>
-                        Woodworking
-                        Hiking, Snowboarding
-                    </ul>                  
-            </div> -->
-            <div class="empty-box"></div>
-        </div>
+</div>
+    
+        <div class="card edu" id="edu">
+    
+        <h2 class='mb-3'>Education</h2>
 
-        <div class="mainbar">
-            <div class="card" id="welcome">
-                <h1>Welcome!</h1>
-                <div class="description">
-                    I am a recently graduated PhD in experimental particle physics and a
-                    former member of the Compact Muon Solenoid (CMS) experiment, an international
-                    collaboration made up of thousands of researchers.
-                    
-                    <br><br>
-                    In contrast with other academic
-                    fields (or even other physics sub-fields), my PhD research experience was similar to
-                    being in a division of a medium-sized software company. In many ways, my analysis of
-                    the data was treated as a product requiring regular technical presentations, a rigorous
-                    internal review process, and the fielding of hundreds of questions from dozens of
-                    collaboration members around the globe.
-                    
-                    <br><br>
-                    Here are some highlights from my experience:
-                    <ul>
-                        <li>
-                            I am the leading world-expert on my analysis ("product") which increased
-                            the sensitivity to detect a heavy resonance decaying to a top quark and W boson by a factor of 2x.
-                            The result has been accepted by the Journal of High Energy Physics and is publicly available at
-                            <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.
-                        </li>
-                        <li>
-                            I created and developed two software tools (TIMBER and 2DAlphabet) that
-                            provide fast, user-friendly python interfaces to commonly used tools,
-                            algorithms, and statistical models used in particle physics field.
-                        </li>
-                        <li>
-                            I was the designated statistics software expert for the Beyond 2 Generations
-                            group (~50 people) and was responsible for approving statistical models used
-                            by different analyses produced in the group before they could proceed through
-                            the approval process (15-20 analyses per year).
-                        </li>
-                        <li>
-                            I've spent significant time training students, post-docs, and faculty/staff
-                            in software tools, model testing, and general analysis procedures in both formal
-                            and informal settings.
-                        </li>
-                    </ul>
-                    I am looking to translate my unique set of skills in software development, model building,
-                    experimental research, and intuitive teaching to a data science role outside of academia.
-                    I have a particular interest in developing user-facing products where the insights from the
-                    data <em style="display: inline !important">are</em> the product, as opposed to the data being the way to <em style="display: inline !important">sell</em> the product.
-
-                    In the time since my program of study completed, I've been taking a mental
-                    break and I'm working on some interesting machine learning projects that I've otherwise not had the time to do!
-                <br><br>
-                    I wrote the HTML and CSS for this site so if there are bugs or typos, please let me know!
-                </div>
-            </div>
-            <div class="card" id="projects">
-                <h1>Projects</h1>
-                <div class="col-container">
-                    <!-- TIMBER -->
-                    <div class="row-container">
-                        
-                        <div class="rows">
-                            <div class="project-link-title">
-                                <h2>TIMBER</h2>
-                                <a href="https://lcorcodilos.github.io/TIMBER/">Docs</a>
-                                <a href="https://github.com/lcorcodilos/TIMBER">Source code</a>
-                                <img src="https://raw.githubusercontent.com/lcorcodilos/TIMBER/master/doxysetup/logo_clear.png" alt="TIMBER" class="logo timber">
-                            </div>
-                            
-                            <div class="time-text">Creator, Lead Developer</div>
-                            
-                            <div class="description">
-                                TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use library of python and C++ tools that can
-                                quickly process CMS data sets with RDataFrame. Default arguments assume the use of the NanoAOD format but
-                                any ROOT TTree can be processed along with other RDataFrame-supported data formats.
-                                <br><br>
-                                While TIMBER provides a library of C++ modules that implement common CMS analysis algorithms, the main
-                                python class is used to track the dataframe processing "tree" and to leverage the information in the tree 
-                                to automate otherwise tedious and error-prone tasks.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 2D Alphabet -->
-                    <div class="row-container">
-                        <!-- <img src="https://raw.githubusercontent.com/lcorcodilos/TIMBER/master/doxysetup/logo_clear.png" alt="TIMBER" class="logo timber" style="opacity: 0;"> -->
-                        <div class="rows">
-                            <div class="project-link-title">
-                                <h2>2D Alphabet</h2>
-                                <a href="https://lcorcodilos.github.io/2DAlphabet/">Docs</a>
-                                <a href="https://github.com/lcorcodilos/2DAlphabet">Source code</a>
-                            </div>
-                            <div class="time-text">Creator, Lead Developer</div>
-                            <div class="description">
-                                A user-friendly framework that constructs a domain specific two-dimensional
-                                model, fits it to data via a maximum likelihood estimate, and collects the 
-                                fit result and plots the results.
-                                The model simultaneously estimates combinatorial backgrounds from data
-                                in a control region while morphing background and signal simulation shape templates.
-                                It can also perform basic manipulation of input histograms and automatically
-                                produces a suite of plots comparing the total background model to data in projections,
-                                comparing pre-fit and post-fit background components, and more.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FastSim Tracking Validation -->
-                    <div class="row-container">
-                        <div class="rows">
-                            <div class="project-link-title">
-                                <h2>FastSim Validation Tool</h2>
-                                <a href="https://github.com/lcorcodilos/FastSimTrackingValidation">Source code</a>
-                            </div>
-                            <div class="time-text">Creator</div>
-                            <div class="description">
-                                Tool to automate the various processing steps to generate Fast Simulation
-                                and to validate across FastSim versions (in particular for when changes need
-                                to be actively tested). Despite the name, this tool can be used outside of
-                                tracking validation since the main infrastructure is in automating the consecutive
-                                processing steps and the submissions to the CRAB batch system. It is also "smart enough" to wait for CRAB to 
-                                finish before proceeding. The package also congregates existing tools to run comparisons
-                                across simulated samples.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- CRAB Task Tracker -->
-                    <div class="row-container">
-                        <div class="rows">
-                            <div class="project-link-title">
-                                <h2>CRAB Task Tracker</h2>
-                                <a href="https://github.com/lcorcodilos/CRABTaskTracker">Source code</a>
-                            </div>
-                            <div class="time-text">Creator</div>
-                            <div class="description">
-                                Simple tool to batch track CRAB jobs on CMS using the CRABClient API. Skips checking any jobs that are fully completed
-                                and makes recommendations to resubmit with more memory if logs indicate this could help.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="card" id="experience">
-                <h1>Research Experience</h1>
-                <div class="col-container">
-                    <div class="row-container">
-                        <img src="images/cms.png" alt="CMS" class="logo cms">
-                        <div class="rows">
-                            <h2>CMS Analysis Lead</h2>
-                            <p class="time-text">Sept 2016 - Nov 2021</p>
-                            <p class="description">
-                                Led analysis effort in the search 
-                                for a heavy resonance decaying to a top quark and a W boson.
-                                <ul>
-                                    <li>Wrote and maintained the analysis code;</li>
-                                    <li>Regularly presented analysis progress in CMS internal meetings;</li>
-                                    <li>Documented the analysis through internal technical documentation and paper preparation;</li>
-                                    <li>Produced numerous studies on novel background estimation method (2D Alphabet);</li>
-                                </ul>
-                                For details on the analysis, please see the physics analysis summary <a href="https://cds.cern.ch/record/2749405">here</a>. 
-                                The CMS Physics Briefing on the analysis (which I helped to draft) can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.
-                                The published paper can be found at <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.
-                            </p>
-
-                            <h2>CMS Statistics Software Contact</h2>
-                            <p class="time-text">Fall 2019 - Fall 2021</p>
-                            <p class="description">Specifically, I am the contact for the "Beyond 2 Generations" (B2G)
-                                physics analysis group. My responsibilities include reviewing the use of statistics 
-                                software in the analyses produced by the group, reviewing required statistical tests
-                                produced by analyses and assisting when there are abnormalities, and answering any 
-                                questions related to the statistics software, modeling issues, or group requirements.
-                                I also help to maintain a CMS-private web page with resources for group members.
-                            </p>
-
-                            <h2>Conference Oral Presentations</h2>
-                            <!-- <p class="time-text"></p> -->
-                            <div class="description">
-                                "Search for heavy BSM particles coupling to third generation quarks at CMS"<br>
-                                    <ul>
-                                        <li>SUSY Conference, <i>Spring 2019</i></li>
-                                        <li>PHENO Conference, <i>Spring 2019</i></li>
-                                        <li>Lake Louise Winter Institute, <i>Early 2019</i><br></li>
-                                    </ul>
-                                "A search for an excited bottom quark decaying to a top quark and W boson in pp collisions at <math><msqrt><mi>s</mi></msqrt></math> = 13 TeV"<br>
-                                    <ul>
-                                        <li>American Physical Society (APS), <i>April 2018</i></li>
-                                    </ul>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" id="teaching">
-                <h1>Teaching Experience</h1>
-                <div class="col-container">
-                    <div class="row-container">
-                        <img src="images/cms.png" alt="CMS" class="logo cms">
-                        <div class="rows">
-                            <h2>Long Exercise Facilitator for CMS Data Analysis School</h2>
-                            <p class="time-text">Fall 2020, Early 2021</p>
-                            <p class="description">
-                                Helped to lead a week-long group exercise where students who are new to CMS data analysis
-                                must work together to recreate (and possibly improve) the analysis for which I am the
-                                lead. Helped to edit and provide approachable python code, gave presentations explaining
-                                key statistics concepts, and answered student questions throughout the week. Done
-                                at the first ever remote CERN school in 2020 and the first ever remote Fermilab school in 2021.
-                            </p>
-
-                            <h2>Mentor to new students</h2>
-                            <p class="time-text">Early 2018 - Fall 2021</p>
-                            <p class="desription">
-                                Mentored both undergraduate and graduate students in their pursuits
-                                to begin research in the JHU experimental particle physics group.
-                                Assisted with a variety of topics ranging across physics concepts, 
-                                coding tools, and statistical analysis.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row-container">
-                        <img src="images/jhu.png" alt="JHU" class="logo jhu teaching">
-                        <div class="rows">
-                            <h2>Classical Mechanics TA (Freshman physics majors)</h2>
-                            <p class="time-text">Every Fall from 2017 to 2020</p>
-                            <p class="description"></p>
-
-                            <h2>General Physics Lecture and Lab TA</h2>
-                            <p class="time-text">Fall 2016, Spring 2017</p>
-                            <p class="description"></p>
-
-                            <h2>Physics Outreach with Virtual Reality</h2>
-                            <p class="time-text">Spring 2018, 2019</p>
-                            <p class="description">
-                                Using personal hardware (PC + HTC Vive), provided a virtual reality
-                                exhibit at the annual JHU Physics Fair which is free and open to the
-                                Baltimore community to enjoy. In 2018, the experience gave visitors
-                                a tour of the ATLAS detector at the LHC via <a href="https://inspirehep.net/literature/1402327)" style="text-decoration: underline;">ATLASrift</a>.
-                                In 2019, the experience allowed
-                                visitors to step "inside" the Belle II detector at the SuperKEKB accelerator
-                                to watch slow motion electron-positron collisions and the particle showers 
-                                that result via <a href="http://www1.phys.vt.edu/~piilonen/VR/" style="text-decoration: underline;">Belle II VR</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+            
+    <div class="edu-item">
+        <img src="images/jhu.png" class="logo jhu">
+        <div>
+            <p class="institute-text">Johns Hopkins University</p>
+            <p class="time-text">Sept 2016 - Dec 2021</p>
+            
+                <p class="degree">Ph.D. Experimental Particle Physics</p>
+            
+                <p class="degree">M.S. Physics</p>
+            
         </div>
     </div>
+    <div class="break"></div>
+
+    <div class="edu-item">
+        <img src="images/ru.png" class="logo ">
+        <div>
+            <p class="institute-text">Rutgers University</p>
+            <p class="time-text">Sept 2012 - May 2016</p>
+            
+                <p class="degree">B.S. Physics</p>
+            
+                <p class="degree">Minor Mathematics</p>
+            
+        </div>
+    </div>
+    <div class="break"></div>
+
+
+        
+
+        
+    
+
+</div>
+    
+        <div class="card skills" id="skills">
+    
+        <h2 class='mb-3'>Technical Skills</h2>
+
+        
+            
+    <h3 class='ms-2'>Languages + Tools</h3>
+    <ul class="linelist mb-4">
+        
+            <li>Python, C++, HTML, CSS, LaTeX, ROOT</li>
+        
+            <li>Linux, Git, Doxygen, Jekyll</li>
+        
+            <li>GitHub Actions, Docker, AWS</li>
+        
+    </ul>
+
+    <h3 class='ms-2'>Packages</h3>
+    <ul class="linelist mb-4">
+        
+            <li>Pandas, Plotly/Dash, scikit-learn, Keras</li>
+        
+            <li>Django, Jinja, Beautiful Soup, Pytest</li>
+        
+    </ul>
+
+    <h3 class='ms-2'>Techniques</h3>
+    <ul class="linelist mb-4">
+        
+            <li>Statistical/ML modeling, web scraping</li>
+        
+            <li>Distributed computing, multi-processing</li>
+        
+            <li>User support</li>
+        
+    </ul>
+
+
+        
+
+        
+    
+
+</div>
+    
+    
+    <div class="empty-box"></div>
+</div>
+        <div class="mainbar">
+    
+        <div class="card " id="welcome">
+    
+        <h2 class='mb-3'>Welcome!</h2>
+
+        
+            <div class="description">
+                
+                    
+                        
+    <p class="mb-3">I am a data scientist with experience analyzing large data sets, writing internal software
+                    tools, and advising teams on statistical models and software in the field of experimental particle physics.</p>
+
+    <p class="mb-3">I wrote the HTML and CSS for this site so if there are bugs or typos, please let me know!</p>
+
+                    
+                    
+                
+                    
+                        <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>I have experience in:</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Cleaning, analyzing, and interpreting large datasets with Python-based tools.
+            </li>
+        
+            <li class="termitem">
+                Performing rigorous scientific research in small and large collaborations.
+            </li>
+        
+            <li class="termitem">
+                Advising research teams on statistical modeling choices and testing.
+            </li>
+        
+            <li class="termitem">
+                Developing Python packages to automate and standardize data manipulations for teams.
+            </li>
+        
+            <li class="termitem">
+                Creating Django-based web applications and deploying to AWS Elastic Beanstalk.
+            </li>
+        
+            <li class="termitem">
+                Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.
+            </li>
+        
+    </ul>
+</div>
+                    
+                    
+                
+                    
+                        <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>Principles that guide my work:</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Data insights are most interesting for <span style="font-style: italic;">developing</span> products, not marketing them.
+            </li>
+        
+            <li class="termitem">
+                A product is only as good as its user interface.
+            </li>
+        
+            <li class="termitem">
+                Jupyter Notebooks have very little use outside of 15 min windows of EDA<span style="font-style: italic;">(I may upset some people with that one...)</span>.
+            </li>
+        
+    </ul>
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseHEP">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom">
+        <p class="w-100 m-0 p-0 text-black text-start">A breakdown of my work in particle physics</p>
+        <div><i class="fa fa-chevron-down"></i></div>
+    </div>
+
+    </button>
+
+    <div id="collapseHEP" class="collapse">
+        
+    <div class='m-0 mt-3'>
+        
+            
+                
+    <p class="mb-3">I have published rigorous, independent research performed with data collected by
+                            the Compact Muon Solenoid (CMS) experiment, an international
+                            collaboration made up of thousands of researchers.</p>
+
+    <p class="mb-3">I also have extensive public speaking experience from years of giving technical presentations to
+                            group leaders, delivering talks at conferences and workshops with 100s of attendees,
+                            and teaching introductory physics courses.</p>
+
+    <p class="mb-3">Some more of my accomplishments:</p>
+
+            
+        
+            
+                <div class="w-100 mb-4">
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                My analysis increased the sensitivity to detect a specific particle decay by a factor of 10x.
+                                The result has been accepted by the Journal of High Energy Physics and is publicly available at
+                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.
+            </li>
+        
+            <li class="termitem">
+                I created and developed two software tools (TIMBER and 2DAlphabet) that
+                                provide fast, user-friendly python interfaces to commonly used tools,
+                                algorithms, and statistical models used in particle physics.
+            </li>
+        
+            <li class="termitem">
+                I completed a two year tenure as the designated statistics software expert for the Beyond 2 Generations
+                                group (~50 people) where I was responsible for approving statistical models used
+                                by 10-5 different analyses per year before they could proceed through
+                                the approval process.
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+            </div>
+
+        
+
+        
+    
+
+</div>
+    
+        <div class="card " id="projects">
+    
+        <h2 class='mb-3'>Projects</h2>
+
+        
+            <div class="description">
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseTIMBER">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">TIMBER</h3>
+            
+                <img src="https://raw.githubusercontent.com/lcorcodilos/TIMBER/master/doxysetup/logo_clear.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Creator, Lead Developer</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseTIMBER" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="https://lcorcodilos.github.io/TIMBER/">Documentation</a></li>
+                
+                    <li><a href="https://github.com/lcorcodilos/TIMBER">Source code</a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3">TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use library of python and C++ tools that can
+                            quickly process CMS data sets with RDataFrame. Default arguments assume the use of the NanoAOD format but
+                            any ROOT TTree can be processed along with other RDataFrame-supported data formats.</p>
+
+    <p class="mb-3">While TIMBER provides a library of C++ modules that implement common CMS analysis algorithms, the main
+                            python class is used to track the dataframe processing "tree" and to leverage the information in the tree 
+                            to automate otherwise tedious and error-prone tasks.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapse2DAlpha">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">2D Alphabet</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Creator, Lead Developer</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapse2DAlpha" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="https://lcorcodilos.github.io/2DAlphabet/">Documentation</a></li>
+                
+                    <li><a href="https://github.com/lcorcodilos/2DAlphabet">Source code</a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3"> A user-friendly framework that constructs a domain specific two-dimensional
+                            model, fits it to data via a maximum likelihood estimate, and collects the 
+                            fit result and plots the results.</p>
+
+    <p class="mb-3">The model simultaneously estimates combinatorial backgrounds from data
+                            in a control region while morphing background and signal simulation shape templates.
+                            It can also perform basic manipulation of input histograms and automatically
+                            produces a suite of plots comparing the total background model to data in projections,
+                            comparing pre-fit and post-fit background components, and more.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseFSVT">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">FastSim Validation Tool</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Creator</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseFSVT" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="https://github.com/lcorcodilos/FastSimTrackingValidation">Source code</a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3">Tool to automate the various processing steps to generate Fast Simulation
+                            and to validate across FastSim versions (in particular for when changes need
+                            to be actively tested). Despite the name, this tool can be used outside of
+                            tracking validation since the main infrastructure is in automating the consecutive
+                            processing steps and the submissions to the CRAB batch system. It is also "smart enough" to wait for CRAB to 
+                            finish before proceeding. The package also congregates existing tools to run comparisons
+                            across simulated samples.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseCRAB">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">CRAB Task Tracker</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Creator</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseCRAB" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="https://github.com/lcorcodilos/CRABTaskTracker">Source code</a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3">Simple tool to batch track CRAB jobs on CMS using the CRABClient API. Skips checking
+                            any jobs that are fully completed and makes recommendations to resubmit with more memory
+                            if logs indicate this could help.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+            </div>
+
+        
+
+        
+    
+
+</div>
+    
+        <div class="card " id="work">
+    
+        <h2 class='mb-3'>Work Experience</h2>
+
+        
+            <div class="description">
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseanalysis">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Analysis Lead</h3>
+            
+                <img src="images/cms.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Sept 2016 - Nov 2021</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseanalysis" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                <div class="w-100 mb-4">
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Wrote and maintained the analysis code;
+            </li>
+        
+            <li class="termitem">
+                Regularly presented analysis progress in CMS internal meetings;
+            </li>
+        
+            <li class="termitem">
+                Documented the analysis through internal technical documentation and paper preparation;
+            </li>
+        
+            <li class="termitem">
+                Produced numerous studies on novel background estimation method (2D Alphabet);
+            </li>
+        
+    </ul>
+</div>
+            
+        
+            
+                
+    <p class="mb-3">Looking for a friendly introduction to the analysis?
+                        The CMS Physics Briefing for the analysis (which I helped to draft) can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.
+                        The published paper can be found at <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsestatcontact">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Statistics Contact</h3>
+            
+                <img src="images/cms.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Fall 2019 - Fall 2021</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapsestatcontact" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                
+    <p class="mb-3">Contact for the "Beyond 2 Generations" (B2G)
+                        physics analysis group. My responsibilities included reviewing the use of statistics 
+                        software in the analyses produced by the group, reviewing required statistical tests
+                        produced by analyses and assisting when there are abnormalities, and answering any 
+                        questions related to the statistics software, modeling issues, or group requirements.
+                        I also helped to maintain a CMS-private web page with resources for group members.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseconferences">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Conference Oral Presentations</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text"></div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseconferences" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>"Search for heavy BSM particles coupling to third generation quarks at CMS"</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                SUSY Conference, <i>Spring 2019</i>
+            </li>
+        
+            <li class="termitem">
+                PHENO Conference, <i>Spring 2019</i>
+            </li>
+        
+            <li class="termitem">
+                Lake Louise Winter Institute, <i>Early 2019</i>
+            </li>
+        
+    </ul>
+</div>
+            
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>"A search for an excited bottom quark decaying to a top quark and W boson in pp collisions at <math><msqrt><mi>s</mi></msqrt></math> = 13 TeV"</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                American Physical Society (APS), <i>April 2018</i>
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+            </div>
+
+        
+
+        
+    
+
+</div>
+    
+        <div class="card " id="teaching">
+    
+        <h2 class='mb-3'>Teaching Experience</h2>
+
+        
+            <div class="description">
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseDAS">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Data Analysis School Facilitator</h3>
+            
+                <img src="images/cms.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Fall 2020, Early 2021</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseDAS" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                
+    <p class="mb-3">Helped to lead a week-long group exercise where students who are new to CMS data analysis
+                        must work together to recreate (and possibly improve) the analysis for which I am the
+                        lead. Helped to edit and provide approachable python code, gave presentations explaining
+                        key statistics concepts, and answered student questions throughout the week. Done
+                        at the first ever remote CERN school in 2020 and the first ever remote Fermilab school in 2021.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsementor">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Mentor</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Early 2018 - Fall 2021</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapsementor" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                
+    <p class="mb-3">Mentored both undergraduate and graduate students in their pursuits
+                        to begin research in the JHU experimental particle physics group.
+                        Assisted with a variety of topics ranging across physics concepts, 
+                        coding tools, and statistical analysis.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseTA">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Teaching Assitant</h3>
+            
+                <img src="images/jhu.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Early 2018 - Fall 2021</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseTA" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>Classical Mechanics (Freshman physics majors)</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Every Fall from 2017 to 2020
+            </li>
+        
+    </ul>
+</div>
+            
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>General Physics Lecture and Lab</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Fall 2016, Spring 2017
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseoutreach">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Physics Outreach with Virtual Reality</h3>
+            
+                <img src="images/jhu.png" class="logo project">
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text">Spring 2018, 2019</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseoutreach" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                <div class="w-100 mb-4">
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                Using personal hardware (PC + HTC Vive), provided a virtual reality
+                        exhibit at the annual JHU Physics Fair which is free and open to the
+                        Baltimore community to enjoy.
+            </li>
+        
+            <li class="termitem">
+                In 2018, the experience gave visitors
+                        a tour of the ATLAS detector at the LHC via <a href="https://inspirehep.net/literature/1402327)" style="text-decoration: underline;">ATLASrift</a>.
+            </li>
+        
+            <li class="termitem">
+                In 2019, the experience allowed
+                        visitors to step "inside" the Belle II detector at the SuperKEKB accelerator
+                        to watch slow motion electron-positron collisions and the particle showers 
+                        that result via <a href="http://www1.phys.vt.edu/~piilonen/VR/" style="text-decoration: underline;">Belle II VR</a>.
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+            </div>
+
+        
+
+        
+    
+
+</div>
+    
+
+
+</div>
+    </div>
+    
   </body>
 </html>

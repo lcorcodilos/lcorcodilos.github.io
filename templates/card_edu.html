@@ -1,0 +1,13 @@
+{% for school in card.schools %}
+    <div class="edu-item">
+        <img src="{{ school['logo'] }}" class="logo {{ school['logo_class'] }}">
+        <div>
+            <p class="institute-text">{{ school['name'] }}</p>
+            <p class="time-text">{{ school['time'] }}</p>
+            {% for degree in school['degrees'] %}
+                <p class="degree">{{ degree }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="break"></div>
+{% endfor %}

@@ -32,8 +32,33 @@ ul {
   padding: 0;
 }
 
-h1 {
+.termlist {
+  list-style: none;
+  margin-left: 4em;
+}
+
+.termitem {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.termitem:before {
+  list-style-position: outside;
+  font-family: 'FontAwesome';
+  content: '\f120';
+  margin-left: -2em;
+  margin-right: 0.8em;
   color: #464646;
+}
+
+h2 {
+  color: #464646;
+  font-weight: bold;
+}
+
+h3 {
+  color: #464646;
+  font-size: x-large;
 }
 
 .break {
@@ -54,6 +79,10 @@ h1 {
   font-style: italic;
   margin-top: 0;
   padding-top: 0;
+}
+
+.fa-thin {
+  -webkit-text-stroke: 3px #f0f0f0;
 }
 
 header {
@@ -86,24 +115,9 @@ header ul {
   max-width: 600px;
 }
 
-header ul li a {
-  padding: 0 1em 0 1em;
-  margin: auto;
-  -webkit-box-flex: 4;
-      -ms-flex: 4 0 auto;
-          flex: 4 0 auto;
-  font-size: 1.5em;
-  font-style: normal;
-  text-decoration: none;
-}
-
-header ul li:first-child a {
+header ul li:first-child {
   padding: 0 1em 0 0em;
   border-left: none;
-}
-
-header ul li a:hover {
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 500px) {
@@ -112,9 +126,42 @@ header ul li a:hover {
     max-width: 90vw;
     font-size: 80%;
   }
-  header ul li a {
+  header ul li {
     padding: 1em;
   }
+}
+
+.navitem-text, .dropdown-item {
+  padding: 0 1em 0 1em;
+  margin: auto;
+  -webkit-box-flex: 4;
+      -ms-flex: 4 0 auto;
+          flex: 4 0 auto;
+  font-size: 1.5em;
+  font-style: normal;
+  text-decoration: none;
+  color: #464646;
+}
+
+.navitem-text:hover, .dropdown-item:hover {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: #464646;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dropdown-item {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
 }
 
 .page {
@@ -141,7 +188,7 @@ header ul li a:hover {
   }
 }
 
-.page .sidebar {
+.sidebar {
   padding: 0;
   margin: 0;
   -webkit-box-flex: 5;
@@ -163,7 +210,7 @@ header ul li a:hover {
       align-self: flex-start;
 }
 
-.page .mainbar {
+.mainbar {
   padding: 0;
   margin: 0;
   -webkit-box-flex: 1;
@@ -184,7 +231,7 @@ header ul li a:hover {
   background-color: white;
   -webkit-box-shadow: 0px 1px 5px #888888;
           box-shadow: 0px 1px 5px #888888;
-  margin: 0 0.7em 1em;
+  margin: 0 1em 1em;
   padding-left: 1em;
   padding-bottom: 1em;
   padding-right: 1em;
@@ -193,9 +240,7 @@ header ul li a:hover {
       -ms-flex: 0 0 1;
           flex: 0 0 1;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -210,15 +255,21 @@ header ul li a:hover {
   }
 }
 
-.card h1 {
+.card h2 {
   margin-bottom: 0.2em;
   margin-top: 0.7em;
 }
 
 .card.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 
 .card.education {
@@ -245,7 +296,7 @@ header ul li a:hover {
   margin-top: 0;
 }
 
-.card ul {
+.card .linelist {
   display: block;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -255,7 +306,7 @@ header ul li a:hover {
   padding-top: 0em;
 }
 
-.card ul li {
+.card .linelist li {
   margin-left: 0.5em;
   padding-left: 3em;
   padding-right: 1em;
@@ -265,18 +316,25 @@ header ul li a:hover {
   margin-left: 1em;
 }
 
-.card ul li:first-child {
+.card .linelist li:first-child {
   padding-top: 0em;
 }
 
-.card .hobbies li {
-  padding-bottom: 0.7em;
+.card .edu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
 }
 
-.card .edu-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
+.card .edu-item div p {
+  margin-bottom: 0em;
 }
 
 .card .logo {
@@ -309,16 +367,13 @@ header ul li a:hover {
   }
 }
 
-.card .logo.timber {
-  width: 5em;
-  margin-top: 0;
-  margin-bottom: -1em;
-  margin-top: -3em;
-  margin-right: 1em;
+.card .logo.project {
+  height: 2.5em;
+  margin: 0;
 }
 
 @media (max-width: 500px) {
-  .card .logo.timber {
+  .card .logo.project {
     display: none;
   }
 }
@@ -331,26 +386,6 @@ header ul li a:hover {
   .card .logo.cms {
     display: none;
   }
-}
-
-.card .cardtitle {
-  display: inline;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-}
-
-.card .cardtitle a h2 {
-  display: inline;
-}
-
-.card .cardtitle p {
-  display: inline;
-  font-size: x-large;
-}
-
-.card .cardtitle h2 {
-  display: inline;
 }
 
 .card .description {
@@ -368,6 +403,13 @@ header ul li a:hover {
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+.basedrop {
+  margin: 0em;
+  margin-bottom: 1em;
+  padding: 0em;
+  border-radius: 0.5em;
+}
+
 .empty-box {
   background-color: white;
   -webkit-box-flex: 0;
@@ -382,8 +424,8 @@ header ul li a:hover {
   margin-top: 2em;
   margin-bottom: 1em;
   padding: 0em;
-  width: 23em;
-  height: 23em;
+  width: 17em;
+  height: 17em;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -405,6 +447,7 @@ header ul li a:hover {
   margin-top: -2em;
   -ms-grid-column-align: center;
       justify-self: center;
+  white-space: nowrap;
 }
 
 .socials {
@@ -417,105 +460,43 @@ header ul li a:hover {
       justify-content: space-around;
 }
 
-.socials .social-buttons {
+.social-buttons {
   font-size: 2em;
   text-decoration: none;
   font-style: normal;
 }
 
-.project-link-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.project-links {
+  display: block;
+  float: left;
+  padding-right: 2em;
+  padding-bottom: 1em;
 }
 
-.project-link-title a {
+.project-links li {
+  width: 100%;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5em;
+  padding-top: 0.7em;
+}
+
+.project-links li a {
   margin-left: 0;
-  padding-right: 1em;
-  padding-left: 1em;
-  border-left: 1px solid #464646;
+  margin-right: 0;
+  margin-top: 1em;
   text-decoration: none;
+  font-weight: bold;
   font-style: normal;
+  font-size: large;
 }
 
-.project-link-title h2 {
+.project-links li:first-child {
+  border-top: none;
+  padding-top: 0em;
+}
+
+.project-links h3 {
   padding-right: 1em;
   border-left: none;
-}
-
-.content {
-  margin-top: 1em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.col-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  margin: 0;
-}
-
-.col-container .row-container {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1;
-          flex: 0 0 1;
-  margin: 0;
-  margin-top: 1em;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.col-container .row-container img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1;
-          flex: 0 0 1;
-  margin: 0;
-}
-
-.col-container .row-container .rows {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1;
-          flex: 0 0 1;
-  margin-left: 0.2em;
-}
-
-.col-container .row-container .rows h2 {
-  display: block;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 0.1em;
-  color: #464646;
-}
-
-.col-container .row-container .rows h4 {
-  display: block;
-  margin-bottom: 0;
-  padding-bottom: 0.1em;
 }
 /*# sourceMappingURL=main.css.map */
