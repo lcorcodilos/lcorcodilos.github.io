@@ -91,7 +91,7 @@ if __name__ == '__main__':
                     header='I have experience in:',
                     items=[
                         'Cleaning, analyzing, and interpreting large datasets with Python-based tools.',
-                        'Advising research teams on statistical modeling choices and testing.',
+                        'Advising research teams on statistical modeling and testing.',
                         'Developing Python packages to automate and standardize data manipulations for teams.',
                         'Creating Django-based web applications and deploying to AWS Elastic Beanstalk.',
                         'Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.',
@@ -113,12 +113,12 @@ if __name__ == '__main__':
                         Bullets(
                             header='',
                             items=[
-                                '''I have published independent research performed with data collected by
+                                '''I published independent research performed with data collected by
                                 the Compact Muon Solenoid (CMS) experiment, an international
                                 collaboration made up of thousands of researchers.''',
                                 '''My analysis increased the sensitivity to detect a specific particle decay by a factor of 10x.
-                                The result has been accepted by the Journal of High Energy Physics and is publicly available at
-                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>. I also helped draft a
+                                The result was published by the Journal of High Energy Physics and is publicly available at
+                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>. I also helped draft
                                 a CMS Physics Briefing for the analysis as a way to highlight my work to the public.
                                 It can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.''',
                                 '''I created and developed two software tools (TIMBER and 2DAlphabet) that
@@ -146,12 +146,13 @@ if __name__ == '__main__':
                     ],
                     items=[
                         P(items=[
-                            '''TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use library of python and C++ tools that can
-                            quickly process CMS data sets with RDataFrame. Default arguments assume the use of the NanoAOD format but
-                            any ROOT TTree can be processed along with other RDataFrame-supported data formats.''',
-                            '''While TIMBER provides a library of C++ modules that implement common CMS analysis algorithms, the main
-                            python class is used to track the dataframe processing "tree" and to leverage the information in the tree 
-                            to automate otherwise tedious and error-prone tasks.'''
+                            '''TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use Python library 
+                            that can quickly process CMS datasets with plug-and-play C++ modules, reducing computation
+                            time by up to a factor of 20x.''',
+                            '''The primary class builds a directed acyclic graph (the "tree") from successive data manipulations so
+                            internal methods can leverage data provenance.'''
+                            '''The interface makes analysis development quicker and encourages better coding praxis so that
+                            analysis code can be more easily shared and understood.'''
                         ])
                     ]
                 ),
@@ -163,14 +164,43 @@ if __name__ == '__main__':
                     ],
                     items=[
                         P(items=[
-                            ''' A user-friendly framework that constructs a domain specific two-dimensional
-                            model, fits it to data via a maximum likelihood estimate, and collects the 
-                            fit result and plots the results.''',
-                            '''The model simultaneously estimates combinatorial backgrounds from data
-                            in a control region while morphing background and signal simulation shape templates.
-                            It can also perform basic manipulation of input histograms and automatically
-                            produces a suite of plots comparing the total background model to data in projections,
-                            comparing pre-fit and post-fit background components, and more.'''
+                            '''The software implementation of the novel modeling technique I developed
+                            of the same name, 2D Alphabet constructs a binned likelihood from 2D parametric
+                            distributions constrained by simulation. Built in methods can also fit
+                            and test the model and produce publication-ready figures of the post-fit results.''',
+                            '''The exposed API also allows for custom models to be built from the fundamental pieces
+                            of the 2D Alphabet framework.'''
+                        ])
+                    ]
+                ),
+                Project(
+                    ID='JAM', header='Job Application Manager', subheader='Creator, Lead Developer',
+                    links=[
+                        ('Website', 'https://jobs.lucascorcodilos.com'),
+                        # ('Source code', 'https://github.com/lcorcodilos/TIMBER')
+                    ],
+                    items=[
+                        P(items=[
+                            '''An online tool to track and manage job applications and interviews.''',
+                            '''Stores dates/times, notes, resume version, and other information with sort and filter
+                            functionality to make it easier to track 100s of job applications.''',
+                            '''Developed in Django and deployed with AWS Elastic Beanstalk.'''
+                        ])
+                    ]
+                ),
+                Project(
+                    ID='ROOT', header='Better ROOT Browser', subheader='Creator, Lead Developer',
+                    # image='https://raw.githubusercontent.com/lcorcodilos/TIMBER/master/doxysetup/logo_clear.png',
+                    links=[
+                        ('<i>In progress</i>', '#'),
+                        # ('Source code', 'https://github.com/lcorcodilos/TIMBER')
+                    ],
+                    items=[
+                        P(items=[
+                            '''A Dash web-application which uses Plotly to provide an interactive interface
+                            for browsing ROOT files.''',
+                            '''In addition to basic browsing functionality similar to ROOT's TBrowser, Better ROOT
+                            Browser includes utilities, such as the template morphing sliders, that make EDA tasks interactive .'''
                         ])
                     ]
                 ),
@@ -181,13 +211,12 @@ if __name__ == '__main__':
                     ],
                     items=[
                         P(items=[
-                            '''Tool to automate the various processing steps to generate Fast Simulation
+                            '''Tool to automate the various processing steps to generate CMS Fast Simulation
                             and to validate across FastSim versions (in particular for when changes need
-                            to be actively tested). Despite the name, this tool can be used outside of
-                            tracking validation since the main infrastructure is in automating the consecutive
-                            processing steps and the submissions to the CRAB batch system. It is also "smart enough" to wait for CRAB to 
-                            finish before proceeding. The package also congregates existing tools to run comparisons
-                            across simulated samples.'''
+                            to be actively tested). The main infrastructure is in automating the consecutive
+                            processing steps and the submissions to the CRAB batch system. The tool will wait for CRAB to 
+                            finish processing jobs before proceeding to subsequent steps.
+                            The package also congregates existing tools to create comparisons across simulation samples.'''
                         ])
                     ]
                 ),
@@ -198,7 +227,7 @@ if __name__ == '__main__':
                     ],
                     items=[
                         P(items=[
-                            '''Simple tool to batch track CRAB jobs on CMS using the CRABClient API. Skips checking
+                            '''Simple tool to batch track CRAB jobs using the CRABClient API. Skips checking
                             any jobs that are fully completed and makes recommendations to resubmit with more memory
                             if logs indicate this could help.'''
                         ])
@@ -210,6 +239,30 @@ if __name__ == '__main__':
     teaching_card = BodyCard(
         ID='teaching', classname='', header='Other Experiences',
         content=[
+            Project(
+                ID='publications', header='Publications', subheader='',
+                items=[
+                    Bullets(
+                        header='Primary Author',
+                        items=[
+                                '''"Search for a heavy resonance decaying to a top quark and a
+                                W boson at &radic;s = 13 TeV in the fully hadronic final state,"
+                                CMS Collaboration, JHEP, 2021''',
+                    ]),
+                    Bullets(
+                        header='Collaborator',
+                        items=[
+                                '''"Search for a heavy resonance decaying into a top quark and a
+                                W boson in the lepton+jets final state at &radic;s = 13 TeV,"
+                                CMS Collaboration, JHEP (submitted), 2021''',
+                                '''"Search for a massive scalar resonance decaying to a light
+                                scalar and a Higgs boson in the four b quarks final state with
+                                boosted topology," CMS Collaboration (in review)''',
+                                '''"Search for resonant production of HH to 4b in boosted and
+                                semi-boosted topologies," CMS Collaboration (in review)'''
+                    ])
+                ]
+            ),
             Project(
                 ID='conferences', header='Conference Oral Presentations', subheader='',
                 items=[
@@ -261,10 +314,10 @@ if __name__ == '__main__':
                 subheader='',
                 items=[
                     Bullets(items=[
-                        '''During the COVID-19 pandemic, voluneered as a tutor for two high
-                        school students taking AP Physics remotely.''',
-                        '''For 2.5 years, served as a revision-based writing tutor at the Rutgers
-                        Plangere Writing Center.'''
+                        '''Volunteered as a tutor for high
+                        school AP Physics students struggling with remote schooling during the COVID-19 pandemic.''',
+                        '''Served as a revision-based writing tutor at the Rutgers
+                        Plangere Writing Center for 2.5 years.'''
                     ])
                 ]
             ),
