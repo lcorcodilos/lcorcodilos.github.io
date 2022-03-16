@@ -189,7 +189,7 @@
             </li>
         
             <li class="termitem">
-                Advising research teams on statistical modeling choices and testing.
+                Advising research teams on statistical modeling and testing.
             </li>
         
             <li class="termitem">
@@ -262,15 +262,15 @@
     <ul class="termlist">
         
             <li class="termitem">
-                I have published independent research performed with data collected by
+                I published independent research performed with data collected by
                                 the Compact Muon Solenoid (CMS) experiment, an international
                                 collaboration made up of thousands of researchers.
             </li>
         
             <li class="termitem">
                 My analysis increased the sensitivity to detect a specific particle decay by a factor of 10x.
-                                The result has been accepted by the Journal of High Energy Physics and is publicly available at
-                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>. I also helped draft a
+                                The result was published by the Journal of High Energy Physics and is publicly available at
+                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>. I also helped draft
                                 a CMS Physics Briefing for the analysis as a way to highlight my work to the public.
                                 It can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.
             </li>
@@ -352,13 +352,13 @@
         
             
                 
-    <p class="mb-3">TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use library of python and C++ tools that can
-                            quickly process CMS data sets with RDataFrame. Default arguments assume the use of the NanoAOD format but
-                            any ROOT TTree can be processed along with other RDataFrame-supported data formats.</p>
+    <p class="mb-3">TIMBER (Tree Interface for Making Binned Events with RDataFrame) is an easy-to-use Python library 
+                            that can quickly process CMS datasets with plug-and-play C++ modules, reducing computation
+                            time by up to a factor of 20x.</p>
 
-    <p class="mb-3">While TIMBER provides a library of C++ modules that implement common CMS analysis algorithms, the main
-                            python class is used to track the dataframe processing "tree" and to leverage the information in the tree 
-                            to automate otherwise tedious and error-prone tasks.</p>
+    <p class="mb-3">The primary class builds a directed acyclic graph (the "tree") from successive data manipulations so
+                            internal methods can leverage data provenance.The interface makes analysis development quicker and encourages better coding praxis so that
+                            analysis code can be more easily shared and understood.</p>
 
             
         
@@ -405,15 +405,112 @@
         
             
                 
-    <p class="mb-3"> A user-friendly framework that constructs a domain specific two-dimensional
-                            model, fits it to data via a maximum likelihood estimate, and collects the 
-                            fit result and plots the results.</p>
+    <p class="mb-3">The software implementation of the novel modeling technique I developed
+                            of the same name, 2D Alphabet constructs a binned likelihood from 2D parametric
+                            distributions constrained by simulation. Built in methods can also fit
+                            and test the model and produce publication-ready figures of the post-fit results.</p>
 
-    <p class="mb-3">The model simultaneously estimates combinatorial backgrounds from data
-                            in a control region while morphing background and signal simulation shape templates.
-                            It can also perform basic manipulation of input histograms and automatically
-                            produces a suite of plots comparing the total background model to data in projections,
-                            comparing pre-fit and post-fit background components, and more.</p>
+    <p class="mb-3">The exposed API also allows for custom models to be built from the fundamental pieces
+                            of the 2D Alphabet framework.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseJAM" style="text-align: left;">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Job Application Manager</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text" style="text-align: right;">Creator, Lead Developer</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseJAM" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="https://jobs.lucascorcodilos.com">Website</a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3">An online tool to track and manage job applications and interviews.</p>
+
+    <p class="mb-3">Stores dates/times, notes, resume version, and other information with sort and filter
+                            functionality to make it easier to track 100s of job applications.</p>
+
+    <p class="mb-3">Developed in Django and deployed with AWS Elastic Beanstalk.</p>
+
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseROOT" style="text-align: left;">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Better ROOT Browser</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text" style="text-align: right;">Creator, Lead Developer</div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapseROOT" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+            <ul class="project-links">
+                
+                    <li><a href="#"><i>In progress</i></a></li>
+                
+            </ul>
+        
+        
+        
+            
+                
+    <p class="mb-3">A Dash web-application which uses Plotly to provide an interactive interface
+                            for browsing ROOT files.</p>
+
+    <p class="mb-3">In addition to basic browsing functionality similar to ROOT's TBrowser, Better ROOT
+                            Browser includes utilities, such as the template morphing sliders, that make EDA tasks interactive .</p>
 
             
         
@@ -458,13 +555,12 @@
         
             
                 
-    <p class="mb-3">Tool to automate the various processing steps to generate Fast Simulation
+    <p class="mb-3">Tool to automate the various processing steps to generate CMS Fast Simulation
                             and to validate across FastSim versions (in particular for when changes need
-                            to be actively tested). Despite the name, this tool can be used outside of
-                            tracking validation since the main infrastructure is in automating the consecutive
-                            processing steps and the submissions to the CRAB batch system. It is also "smart enough" to wait for CRAB to 
-                            finish before proceeding. The package also congregates existing tools to run comparisons
-                            across simulated samples.</p>
+                            to be actively tested). The main infrastructure is in automating the consecutive
+                            processing steps and the submissions to the CRAB batch system. The tool will wait for CRAB to 
+                            finish processing jobs before proceeding to subsequent steps.
+                            The package also congregates existing tools to create comparisons across simulation samples.</p>
 
             
         
@@ -509,7 +605,7 @@
         
             
                 
-    <p class="mb-3">Simple tool to batch track CRAB jobs on CMS using the CRABClient API. Skips checking
+    <p class="mb-3">Simple tool to batch track CRAB jobs using the CRABClient API. Skips checking
                             any jobs that are fully completed and makes recommendations to resubmit with more memory
                             if logs indicate this could help.</p>
 
@@ -539,6 +635,84 @@
 
         
             <div class="description">
+                
+                    
+                        <div class="basedrop d-block m-0 mt-1">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsepublications" style="text-align: left;">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
+        <div class="d-flex align-items-center">
+            <h3 class="m-0 me-3">Publications</h3>
+            
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 time-text" style="text-align: right;"></div>
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </div>
+
+    </button>
+
+    <div id="collapsepublications" class="collapse">
+        
+    <div class="mt-2 ms-4 me-4 mb-0">
+        
+        
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>Primary Author</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                "Search for a heavy resonance decaying to a top quark and a
+                                W boson at &radic;s = 13 TeV in the fully hadronic final state,"
+                                CMS Collaboration, JHEP, 2021
+            </li>
+        
+    </ul>
+</div>
+            
+        
+            
+                <div class="w-100 mb-4">
+    
+        <p class='border-bottom text-black'>Collaborator</p>
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                "Search for a heavy resonance decaying into a top quark and a
+                                W boson in the lepton+jets final state at &radic;s = 13 TeV,"
+                                CMS Collaboration, JHEP (submitted), 2021
+            </li>
+        
+            <li class="termitem">
+                "Search for a massive scalar resonance decaying to a light
+                                scalar and a Higgs boson in the four b quarks final state with
+                                boosted topology," CMS Collaboration (in review)
+            </li>
+        
+            <li class="termitem">
+                "Search for resonant production of HH to 4b in boosted and
+                                semi-boosted topologies," CMS Collaboration (in review)
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
                 
                     
                         <div class="basedrop d-block m-0 mt-1">
@@ -743,13 +917,13 @@
     <ul class="termlist">
         
             <li class="termitem">
-                During the COVID-19 pandemic, voluneered as a tutor for two high
-                        school students taking AP Physics remotely.
+                Volunteered as a tutor for high
+                        school AP Physics students struggling with remote schooling during the COVID-19 pandemic.
             </li>
         
             <li class="termitem">
-                For 2.5 years, served as a revision-based writing tutor at the Rutgers
-                        Plangere Writing Center.
+                Served as a revision-based writing tutor at the Rutgers
+                        Plangere Writing Center for 2.5 years.
             </li>
         
     </ul>
