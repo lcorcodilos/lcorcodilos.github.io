@@ -91,11 +91,12 @@ if __name__ == '__main__':
                     header='I have experience in:',
                     items=[
                         'Cleaning, analyzing, and interpreting large datasets with Python-based tools.',
-                        'Performing rigorous scientific research in small and large collaborations.',
                         'Advising research teams on statistical modeling choices and testing.',
                         'Developing Python packages to automate and standardize data manipulations for teams.',
                         'Creating Django-based web applications and deploying to AWS Elastic Beanstalk.',
-                        'Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.'
+                        'Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.',
+                        'Giving technical presentations to group leaders and general talks at conferences with 100s of attendees',
+                        'Performing and publishing rigorous scientific research based on analysis of large datasets.',
                     ]
                 ),
                 Bullets(
@@ -109,28 +110,23 @@ if __name__ == '__main__':
                 Dropdown(
                     ID='HEP', header='A breakdown of my work in particle physics',
                     items=[
-                        P(items=[
-                            '''I have published rigorous, independent research performed with data collected by
-                            the Compact Muon Solenoid (CMS) experiment, an international
-                            collaboration made up of thousands of researchers.''',
-                            '''I also have extensive public speaking experience from years of giving technical presentations to
-                            group leaders, delivering talks at conferences and workshops with 100s of attendees,
-                            and teaching introductory physics courses.''',
-                            '''Some more of my accomplishments:'''
-                        ]),
                         Bullets(
                             header='',
                             items=[
+                                '''I have published independent research performed with data collected by
+                                the Compact Muon Solenoid (CMS) experiment, an international
+                                collaboration made up of thousands of researchers.''',
                                 '''My analysis increased the sensitivity to detect a specific particle decay by a factor of 10x.
                                 The result has been accepted by the Journal of High Energy Physics and is publicly available at
-                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.''',
+                                <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>. I also helped draft a
+                                a CMS Physics Briefing for the analysis as a way to highlight my work to the public.
+                                It can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.''',
                                 '''I created and developed two software tools (TIMBER and 2DAlphabet) that
                                 provide fast, user-friendly python interfaces to commonly used tools,
                                 algorithms, and statistical models used in particle physics.''',
-                                '''I completed a two year tenure as the designated statistics software expert for the Beyond 2 Generations
-                                group (~50 people) where I was responsible for approving statistical models used
-                                by 10-5 different analyses per year before they could proceed through
-                                the approval process.'''
+                                '''I completed a two year tenure as the designated statistics software expert for a group of
+                                40-60 people where I was responsible for approving statistical models and their software implementation
+                                for 10-15 different analyses per year.'''
                             ]
                         )
                     ]
@@ -211,40 +207,9 @@ if __name__ == '__main__':
             ]
         )
 
-    work_card = BodyCard(
-        ID='work', classname='', header='Work Experience',
+    teaching_card = BodyCard(
+        ID='teaching', classname='', header='Other Experiences',
         content=[
-            Project(
-                ID='analysis', header='Analysis Lead', subheader='Sept 2016 - Nov 2021',
-                image='images/cms.png',
-                items=[
-                    Bullets(items=[
-                        'Wrote and maintained the analysis code;',
-                        'Regularly presented analysis progress in CMS internal meetings;',
-                        'Documented the analysis through internal technical documentation and paper preparation;',
-                        'Produced numerous studies on novel background estimation method (2D Alphabet);'
-                    ]),
-                    P(items=[
-                        '''Looking for a friendly introduction to the analysis?
-                        The CMS Physics Briefing for the analysis (which I helped to draft) can be found <a href="https://cms.cern/news/getting-excited-about-quarks">here</a>.
-                        The published paper can be found at <a href="https://arxiv.org/abs/2104.12853">arXiv:2104.12853</a>.'''
-                    ]),
-                ]
-            ),
-            Project(
-                ID='statcontact', header='Statistics Contact', subheader='Fall 2019 - Fall 2021',
-                image='images/cms.png',
-                items=[
-                    P(items=[
-                        '''Contact for the "Beyond 2 Generations" (B2G)
-                        physics analysis group. My responsibilities included reviewing the use of statistics 
-                        software in the analyses produced by the group, reviewing required statistical tests
-                        produced by analyses and assisting when there are abnormalities, and answering any 
-                        questions related to the statistics software, modeling issues, or group requirements.
-                        I also helped to maintain a CMS-private web page with resources for group members.'''
-                    ])
-                ]
-            ),
             Project(
                 ID='conferences', header='Conference Oral Presentations', subheader='',
                 items=[
@@ -261,55 +226,22 @@ if __name__ == '__main__':
                                 'American Physical Society (APS), <i>April 2018</i>'
                     ])
                 ]
-            )
-        ]
-    )
-
-    teaching_card = BodyCard(
-        ID='teaching', classname='', header='Teaching Experience',
-        content=[
+            ),
             Project(
                 ID='DAS', header='Data Analysis School Facilitator',
-                subheader='Fall 2020, Early 2021', image='images/cms.png',
+                subheader='Fall 2020, Early 2021', #image='images/cms.png',
                 items=[
                     P(items=[
-                        '''Helped to lead a week-long group exercise where students who are new to CMS data analysis
-                        must work together to recreate (and possibly improve) the analysis for which I am the
-                        lead. Helped to edit and provide approachable python code, gave presentations explaining
-                        key statistics concepts, and answered student questions throughout the week. Done
-                        at the first ever remote CERN school in 2020 and the first ever remote Fermilab school in 2021.'''
+                        '''Helped to lead a week-long group exercise where students new to CMS data analysis
+                        worked together to recreate my analysis. Helped to edit and provide approachable python code, gave presentations explaining
+                        key statistics concepts, and answered student questions throughout the week. My group
+                        from the 2021 session won best analysis!'''
                     ])
-                ]
-            ),
-            Project(
-                ID='mentor', header='Mentor',
-                subheader='Early 2018 - Fall 2021',
-                items=[
-                    P(items=[
-                        '''Mentored both undergraduate and graduate students in their pursuits
-                        to begin research in the JHU experimental particle physics group.
-                        Assisted with a variety of topics ranging across physics concepts, 
-                        coding tools, and statistical analysis.'''
-                    ])
-                ]
-            ),
-            Project(
-                ID='TA', header='Teaching Assitant',
-                subheader='Early 2018 - Fall 2021',  image='images/jhu.png',
-                items=[
-                    Bullets(
-                        header='Classical Mechanics (Freshman physics majors)',
-                        items=['Every Fall from 2017 to 2020']
-                    ),
-                    Bullets(
-                        header='General Physics Lecture and Lab',
-                        items=['Fall 2016, Spring 2017']
-                    )
                 ]
             ),
             Project(
                 ID='outreach', header='Physics Outreach with Virtual Reality',
-                subheader='Spring 2018, 2019', image='images/jhu.png',
+                subheader='Spring 2018, 2019', #image='images/jhu.png',
                 items=[
                     Bullets(items=[
                         '''Using personal hardware (PC + HTC Vive), provided a virtual reality
@@ -322,6 +254,44 @@ if __name__ == '__main__':
                         to watch slow motion electron-positron collisions and the particle showers 
                         that result via <a href="http://www1.phys.vt.edu/~piilonen/VR/" style="text-decoration: underline;">Belle II VR</a>.'''
                     ]),
+                ]
+            ),
+            Project(
+                ID='tutor', header='Tutor',
+                subheader='',
+                items=[
+                    Bullets(items=[
+                        '''During the COVID-19 pandemic, voluneered as a tutor for two high
+                        school students taking AP Physics remotely.''',
+                        '''For 2.5 years, served as a revision-based writing tutor at the Rutgers
+                        Plangere Writing Center.'''
+                    ])
+                ]
+            ),
+            Project(
+                ID='TA', header='Teaching Assitant',
+                subheader='Early 2018 - Fall 2021',  #image='images/jhu.png',
+                items=[
+                    Bullets(
+                        header='Classical Mechanics (Freshman physics majors)',
+                        items=['Every Fall from 2017 to 2020']
+                    ),
+                    Bullets(
+                        header='General Physics Lecture and Lab',
+                        items=['Fall 2016, Spring 2017']
+                    )
+                ]
+            ),
+            Project(
+                ID='mentor', header='Mentor',
+                subheader='Early 2018 - Fall 2021',
+                items=[
+                    P(items=[
+                        '''Mentored both undergraduate and graduate students in their pursuits
+                        to begin research in the JHU experimental particle physics group.
+                        Assisted with a variety of topics ranging across physics concepts, 
+                        coding tools, and statistical analysis.'''
+                    ])
                 ]
             )
         ]
@@ -384,7 +354,6 @@ if __name__ == '__main__':
     bodycards = [
         welcome_card,
         project_card,
-        work_card,
         teaching_card
     ]
 

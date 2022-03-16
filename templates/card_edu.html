@@ -1,7 +1,7 @@
 {% for school in card.schools %}
-    <div class="edu-item">
+    <div class="edu-item mb-2">
         <img src="{{ school['logo'] }}" class="logo {{ school['logo_class'] }}">
-        <div>
+        <div style="text-align: left;">
             <p class="institute-text">{{ school['name'] }}</p>
             <p class="time-text">{{ school['time'] }}</p>
             {% for degree in school['degrees'] %}
@@ -9,5 +9,5 @@
             {% endfor %}
         </div>
     </div>
-    <div class="break"></div>
+    
 {% endfor %}

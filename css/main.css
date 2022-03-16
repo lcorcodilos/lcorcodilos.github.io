@@ -15,7 +15,7 @@ body {
 @media (max-width: 500px) {
   body {
     max-width: 500px;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 
@@ -56,9 +56,41 @@ h2 {
   font-weight: bold;
 }
 
+@media (max-width: 500px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
 h3 {
   color: #464646;
   font-size: x-large;
+}
+
+@media (max-width: 500px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+h4 {
+  color: #464646;
+}
+
+@media (max-width: 500px) {
+  h4 {
+    font-size: 1rem;
+  }
+}
+
+h5 {
+  color: #464646;
+}
+
+@media (max-width: 500px) {
+  h5 {
+    font-size: 1rem;
+  }
 }
 
 .break {
@@ -81,22 +113,24 @@ h3 {
   padding-top: 0;
 }
 
+@media (max-width: 500px) {
+  .time-text {
+    font-size: 1em;
+  }
+}
+
 .fa-thin {
   -webkit-text-stroke: 3px #f0f0f0;
 }
 
 header {
-  margin: 2em 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  margin-left: 1em;
   width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-@media (max-width: 500px) {
-  header {
-    max-width: 500px;
-  }
 }
 
 header ul {
@@ -115,28 +149,17 @@ header ul {
   max-width: 600px;
 }
 
-header ul li:first-child {
-  padding: 0 1em 0 0em;
-  border-left: none;
-}
-
 @media (max-width: 500px) {
   header ul {
-    padding-bottom: 0.7em;
+    padding-bottom: 0.2em;
     max-width: 90vw;
     font-size: 80%;
-  }
-  header ul li {
-    padding: 1em;
   }
 }
 
 .navitem-text, .dropdown-item {
   padding: 0 1em 0 1em;
   margin: auto;
-  -webkit-box-flex: 4;
-      -ms-flex: 4 0 auto;
-          flex: 4 0 auto;
   font-size: 1.5em;
   font-style: normal;
   text-decoration: none;
@@ -191,23 +214,16 @@ header ul li:first-child {
 .sidebar {
   padding: 0;
   margin: 0;
-  -webkit-box-flex: 5;
-      -ms-flex: 5 5 auto;
-          flex: 5 5 auto;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 auto;
+          flex: 2 2 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
 }
 
 .mainbar {
@@ -219,8 +235,6 @@ header ul li:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -267,9 +281,6 @@ header ul li:first-child {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
 }
 
 .card.education {
@@ -330,7 +341,6 @@ header ul li:first-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  white-space: nowrap;
 }
 
 .card .edu-item div p {
@@ -340,7 +350,9 @@ header ul li:first-child {
 .card .logo {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin: 1em;
+  justify-self: flex-start;
+  margin-top: 1em;
+  margin-right: 0.7em;
   padding: 0;
   display: block;
   -webkit-box-flex: 0;
@@ -348,16 +360,17 @@ header ul li:first-child {
           flex: 0 0 10%;
   -o-object-fit: scale-down;
      object-fit: scale-down;
-  width: 6em;
+  width: 4em;
 }
 
 @media (max-width: 500px) {
   .card .logo {
-    margin: 0.6em;
+    display: none;
   }
 }
 
 .card .logo.jhu {
+  margin-top: 0;
   padding: 0.4em;
 }
 
