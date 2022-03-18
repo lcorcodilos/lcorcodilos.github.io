@@ -181,8 +181,8 @@ if __name__ == '__main__':
                     ],
                     items=[
                         P(items=[
-                            '''An online tool to track and manage job applications and interviews.''',
-                            '''Stores dates/times, notes, resume version, and other information with sort and filter
+                            '''An online tool to track and manage job applications and interviews.
+                            Stores dates/times, notes, resume version, and other information with sort and filter
                             functionality to make it easier to track 100s of job applications.''',
                             '''Developed in Django and deployed with AWS Elastic Beanstalk.'''
                         ])
@@ -200,7 +200,7 @@ if __name__ == '__main__':
                             '''A Dash web-application which uses Plotly to provide an interactive interface
                             for browsing ROOT files.''',
                             '''In addition to basic browsing functionality similar to ROOT's TBrowser, Better ROOT
-                            Browser includes utilities, such as the template morphing sliders, that make EDA tasks interactive .'''
+                            Browser includes utilities, such as the template morphing sliders, that make EDA tasks interactive.'''
                         ])
                     ]
                 ),
@@ -323,7 +323,7 @@ if __name__ == '__main__':
             ),
             Project(
                 ID='TA', header='Teaching Assitant',
-                subheader='Early 2018 - Fall 2021',  #image='images/jhu.png',
+                subheader='',  #image='images/jhu.png',
                 items=[
                     Bullets(
                         header='Classical Mechanics (Freshman physics majors)',
