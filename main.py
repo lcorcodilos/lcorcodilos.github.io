@@ -84,7 +84,8 @@ if __name__ == '__main__':
             content=[
                 P(items=[
                     '''I am a data scientist with experience analyzing large data sets, writing internal software
-                    tools, and advising teams on statistical models and software in the field of experimental particle physics.''',
+                    tools, and advising teams on statistical models and software. I currently work in cybersecurity 
+                    and formerly worked in experimental particle physics.''',
                     '''I wrote the HTML and CSS for this site so if there are bugs or typos, please let me know!'''
                 ]),
                 Bullets(
