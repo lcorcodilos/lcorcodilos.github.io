@@ -177,7 +177,7 @@ if __name__ == '__main__':
                 Project(
                     ID='JAM', header='Job Application Manager', subheader='Creator, Lead Developer',
                     links=[
-                        ('Website', 'https://jobs.lucascorcodilos.com'),
+                        # ('Website', 'https://jobs.lucascorcodilos.com'),
                         # ('Source code', 'https://github.com/lcorcodilos/TIMBER')
                     ],
                     items=[
@@ -185,7 +185,7 @@ if __name__ == '__main__':
                             '''An online tool to track and manage job applications and interviews.
                             Stores dates/times, notes, resume version, and other information with sort and filter
                             functionality to make it easier to track 100s of job applications.''',
-                            '''Developed in Django and deployed with AWS Elastic Beanstalk.'''
+                            '''Developed in Django and deployed with AWS Elastic Beanstalk (EOL: April 2023).'''
                         ])
                     ]
                 ),
