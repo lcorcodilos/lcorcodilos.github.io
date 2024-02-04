@@ -83,33 +83,55 @@ if __name__ == '__main__':
             ID='welcome', classname='', header='Welcome!',
             content=[
                 P(items=[
-                    '''I am a data scientist with experience analyzing large data sets, writing internal software
-                    tools, and advising teams on statistical models and software. I currently work in cybersecurity 
-                    and formerly worked in experimental particle physics.''',
+                    '''I am a data scientist with experience analyzing large data sets, working with unbalanced data,
+                    designing streaming applications, and building custom purpose-driven models. I currently work in cybersecurity
+                    at Vectra AI and formerly worked in experimental particle physics as a part of the CMS Collaboration.''',
                     '''I wrote the HTML and CSS for this site so if there are bugs or typos, please let me know!'''
                 ]),
                 Bullets(
                     header='I have experience in:',
                     items=[
-                        'Cleaning, analyzing, and interpreting large datasets with Python-based tools.',
-                        'Advising research teams on statistical modeling and testing.',
-                        'Developing Python packages to automate and standardize data manipulations for teams.',
-                        'Creating Django-based web applications and deploying to AWS Elastic Beanstalk.',
-                        'Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.',
-                        'Giving technical presentations to group leaders and general talks at conferences with 100s of attendees',
-                        'Performing and publishing rigorous scientific research based on analysis of large datasets.',
+                        'Working with streaming data in the context of developing real time cyber attacker detection algorithms.',
+                        'Analyzing unbalanced datasets, specifically in cybersecurity where malicious samples are hard to come by.',
+                        'Standard python coding practices including Black formatting, type hinting, and unit testing.',
+                        'Source code management via git including using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.',
+                        'Developing Python packages to improve workflows for myself and others on my team, including using Docker to build services that support development work.',
+                        'Investigating customer issues in on-prem and cloud environments, working with support teams to address customer concerns.',
+                        'Following the latest developments on large language model (LLM) research.',
+                        'Giving presentations on technical topics in various forums ranging from rooms of engineers to company leadership to conference attendees.',
+                        'Performing and publishing rigorous scientific research.',
                     ]
                 ),
                 Bullets(
                     header='Principles that guide my work:',
                     items=[
                         'Data insights are most interesting for <span style="font-style: italic;">developing</span> products, not marketing them.',
-                        'A product is only as good as its user interface.',
-                        'Jupyter Notebooks have very little use outside of 15 min windows of EDA<span style="font-style: italic;">(I may upset some people with that one...)</span>.'
+                        'A product is only as good as its user experience.',
+                        'Jupyter Notebooks should be limited to 15 min windows of EDA <span style="font-style: italic;">(I may upset some people with that one...)</span>.'
                     ]
                 ),
                 Dropdown(
-                    ID='HEP', header='A breakdown of my work in particle physics',
+                    ID='Vectra', header='My work at Vectra AI',
+                    items=[
+                        Bullets(
+                            header='',
+                            items=[
+                                '''I've worked on detection algorithms in both network and cloud environments (AWS and M365 specifically).''',
+                                '''On the network side, I've developed algorithms to detect DCSync and DCShadow attacks via the DRSUAPI. I've also worked on
+                                logic to detect reconnaissance activity via LDAP.''',
+                                '''On the cloud side, I've worked on algorithms that detect suspicious SharePoint downloading activity as well
+                                as recon in AWS environments from credentials stolen from insecure EC2 instances.''',
+                                '''I've also participated in efforts to understand the underlying behavior of Command-and-Control channels.''',
+                                '''As a part of a small team, I investigated using LLMs in the product's interface. I've investigated the feasibility
+                                of Natural Language to SQL query systems and the potential for fine-tuning open source models via methods such as LoRA and QLoRA.
+                                For this work, I also built an ORM-based package for defining, running, and visualizing repeatable experiments on LLMs
+                                and prompts for LLMs.''',
+                            ]
+                        )
+                    ]
+                ),
+                Dropdown(
+                    ID='HEP', header='My work in particle physics',
                     items=[
                         Bullets(
                             header='',
@@ -136,7 +158,7 @@ if __name__ == '__main__':
         )
 
     project_card = BodyCard(
-            ID='projects', classname='', header='Projects',
+            ID='projects', classname='', header='Old Projects',
             content=[
                 Project(
                     ID='TIMBER', header='TIMBER', subheader='Creator, Lead Developer',
@@ -255,12 +277,10 @@ if __name__ == '__main__':
                         items=[
                                 '''"Search for a heavy resonance decaying into a top quark and a
                                 W boson in the lepton+jets final state at &radic;s = 13 TeV,"
-                                CMS Collaboration, JHEP (submitted), 2021''',
+                                CMS Collaboration, JHEP, 2022''',
                                 '''"Search for a massive scalar resonance decaying to a light
                                 scalar and a Higgs boson in the four b quarks final state with
-                                boosted topology," CMS Collaboration (in review)''',
-                                '''"Search for resonant production of HH to 4b in boosted and
-                                semi-boosted topologies," CMS Collaboration (in review)'''
+                                boosted topology," Phys. Lett. B (2023)''',
                     ])
                 ]
             ),
@@ -388,18 +408,26 @@ if __name__ == '__main__':
             header='Technical Skills',
             skills=[
                 ('Languages + Tools', [
-                    'Python, C++, HTML, CSS, LaTeX, ROOT',
-                    'Linux, Git, Doxygen, Jekyll', 
+                    'Python, C++, HTML, CSS',
+                    'Linux, Git, Docker',
+                    'Memgraph/Neo4j/Cypher',
+                    'LaTeX, Doxygen, Jekyll',
                     'GitHub Actions, Docker, AWS'
                 ]),
                 ('Packages', [
-                    'Pandas, Plotly/Dash, scikit-learn, Keras',
-                    'Django, Jinja, Beautiful Soup, Pytest' 
+                    'Pyspark, Polars, Numpy, Scipy, Pandas',
+                    'Scikit-learn, Pytorch'
+                    'Black, mypy, Pytest',
+                    'Plotly/Dash',
+                    'Django, Jinja, Beautiful Soup',
                 ]),
                 ('Techniques', [
-                    'Statistical/ML modeling, web scraping',
+                    'Statistical and ML modeling',
+                    'Algorithm design',
+                    'Source code management',
+                    'Code review',
+                    'Web scraping',
                     'Distributed computing, multi-processing',
-                    'User support'
                 ])
             ]
         )

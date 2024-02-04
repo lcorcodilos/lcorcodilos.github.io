@@ -118,9 +118,13 @@
     <h3 class='ms-2'>Languages + Tools</h3>
     <ul class="linelist mb-4">
         
-            <li>Python, C++, HTML, CSS, LaTeX, ROOT</li>
+            <li>Python, C++, HTML, CSS</li>
         
-            <li>Linux, Git, Doxygen, Jekyll</li>
+            <li>Linux, Git, Docker</li>
+        
+            <li>Memgraph/Neo4j/Cypher</li>
+        
+            <li>LaTeX, Doxygen, Jekyll</li>
         
             <li>GitHub Actions, Docker, AWS</li>
         
@@ -129,20 +133,30 @@
     <h3 class='ms-2'>Packages</h3>
     <ul class="linelist mb-4">
         
-            <li>Pandas, Plotly/Dash, scikit-learn, Keras</li>
+            <li>Pyspark, Polars, Numpy, Scipy, Pandas</li>
         
-            <li>Django, Jinja, Beautiful Soup, Pytest</li>
+            <li>Scikit-learn, PytorchBlack, mypy, Pytest</li>
+        
+            <li>Plotly/Dash</li>
+        
+            <li>Django, Jinja, Beautiful Soup</li>
         
     </ul>
 
     <h3 class='ms-2'>Techniques</h3>
     <ul class="linelist mb-4">
         
-            <li>Statistical/ML modeling, web scraping</li>
+            <li>Statistical and ML modeling</li>
+        
+            <li>Algorithm design</li>
+        
+            <li>Source code management</li>
+        
+            <li>Code review</li>
+        
+            <li>Web scraping</li>
         
             <li>Distributed computing, multi-processing</li>
-        
-            <li>User support</li>
         
     </ul>
 
@@ -168,9 +182,9 @@
                 
                     
                         
-    <p class="mb-3">I am a data scientist with experience analyzing large data sets, writing internal software
-                    tools, and advising teams on statistical models and software. I currently work in cybersecurity 
-                    and formerly worked in experimental particle physics.</p>
+    <p class="mb-3">I am a data scientist with experience analyzing large data sets, working with unbalanced data,
+                    designing streaming applications, and building custom purpose-driven models. I currently work in cybersecurity
+                    at Vectra AI and formerly worked in experimental particle physics as a part of the CMS Collaboration.</p>
 
     <p class="mb-3">I wrote the HTML and CSS for this site so if there are bugs or typos, please let me know!</p>
 
@@ -185,31 +199,39 @@
     <ul class="termlist">
         
             <li class="termitem">
-                Cleaning, analyzing, and interpreting large datasets with Python-based tools.
+                Working with streaming data in the context of developing real time cyber attacker detection algorithms.
             </li>
         
             <li class="termitem">
-                Advising research teams on statistical modeling and testing.
+                Analyzing unbalanced datasets, specifically in cybersecurity where malicious samples are hard to come by.
             </li>
         
             <li class="termitem">
-                Developing Python packages to automate and standardize data manipulations for teams.
+                Standard python coding practices including Black formatting, type hinting, and unit testing.
             </li>
         
             <li class="termitem">
-                Creating Django-based web applications and deploying to AWS Elastic Beanstalk.
+                Source code management via git including using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.
             </li>
         
             <li class="termitem">
-                Using GitHub workflows + Docker for CI/CD that automates testing, compiling, and deployment of projects.
+                Developing Python packages to improve workflows for myself and others on my team, including using Docker to build services that support development work.
             </li>
         
             <li class="termitem">
-                Giving technical presentations to group leaders and general talks at conferences with 100s of attendees
+                Investigating customer issues in on-prem and cloud environments, working with support teams to address customer concerns.
             </li>
         
             <li class="termitem">
-                Performing and publishing rigorous scientific research based on analysis of large datasets.
+                Following the latest developments on large language model (LLM) research.
+            </li>
+        
+            <li class="termitem">
+                Giving presentations on technical topics in various forums ranging from rooms of engineers to company leadership to conference attendees.
+            </li>
+        
+            <li class="termitem">
+                Performing and publishing rigorous scientific research.
             </li>
         
     </ul>
@@ -229,11 +251,11 @@
             </li>
         
             <li class="termitem">
-                A product is only as good as its user interface.
+                A product is only as good as its user experience.
             </li>
         
             <li class="termitem">
-                Jupyter Notebooks have very little use outside of 15 min windows of EDA<span style="font-style: italic;">(I may upset some people with that one...)</span>.
+                Jupyter Notebooks should be limited to 15 min windows of EDA <span style="font-style: italic;">(I may upset some people with that one...)</span>.
             </li>
         
     </ul>
@@ -242,11 +264,69 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
+    <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseVectra" style="text-align: left;">
+        
+    <div class="d-flex justify-content-between align-items-center border-bottom">
+        <p class="w-100 m-0 p-0 text-black text-start">My work at Vectra AI</p>
+        <div><i class="fa fa-chevron-down"></i></div>
+    </div>
+
+    </button>
+
+    <div id="collapseVectra" class="collapse">
+        
+    <div class='m-0 mt-3'>
+        
+            
+                <div class="w-100 mb-4">
+    
+    <ul class="termlist">
+        
+            <li class="termitem">
+                I've worked on detection algorithms in both network and cloud environments (AWS and M365 specifically).
+            </li>
+        
+            <li class="termitem">
+                On the network side, I've developed algorithms to detect DCSync and DCShadow attacks via the DRSUAPI. I've also worked on
+                                logic to detect reconnaissance activity via LDAP.
+            </li>
+        
+            <li class="termitem">
+                On the cloud side, I've worked on algorithms that detect suspicious SharePoint downloading activity as well
+                                as recon in AWS environments from credentials stolen from insecure EC2 instances.
+            </li>
+        
+            <li class="termitem">
+                I've also participated in efforts to understand the underlying behavior of Command-and-Control channels.
+            </li>
+        
+            <li class="termitem">
+                As a part of a small team, I investigated using LLMs in the product's interface. I've investigated the feasibility
+                                of Natural Language to SQL query systems and the potential for fine-tuning open source models via methods such as LoRA and QLoRA.
+                                For this work, I also built an ORM-based package for defining, running, and visualizing repeatable experiments on LLMs
+                                and prompts for LLMs.
+            </li>
+        
+    </ul>
+</div>
+            
+        
+    </div>
+    
+
+    </div>
+
+</div>
+                    
+                    
+                
+                    
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseHEP" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom">
-        <p class="w-100 m-0 p-0 text-black text-start">A breakdown of my work in particle physics</p>
+        <p class="w-100 m-0 p-0 text-black text-start">My work in particle physics</p>
         <div><i class="fa fa-chevron-down"></i></div>
     </div>
 
@@ -311,13 +391,13 @@
     
         <div class="card " id="projects">
     
-        <h2 class='mb-3'>Projects</h2>
+        <h2 class='mb-3'>Old Projects</h2>
 
         
             <div class="description">
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseTIMBER" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -372,7 +452,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapse2DAlpha" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -425,7 +505,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseJAM" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -468,7 +548,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseROOT" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -517,7 +597,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseFSVT" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -567,7 +647,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseCRAB" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -630,7 +710,7 @@
             <div class="description">
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsepublications" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -680,18 +760,13 @@
             <li class="termitem">
                 "Search for a heavy resonance decaying into a top quark and a
                                 W boson in the lepton+jets final state at &radic;s = 13 TeV,"
-                                CMS Collaboration, JHEP (submitted), 2021
+                                CMS Collaboration, JHEP, 2022
             </li>
         
             <li class="termitem">
                 "Search for a massive scalar resonance decaying to a light
                                 scalar and a Higgs boson in the four b quarks final state with
-                                boosted topology," CMS Collaboration (in review)
-            </li>
-        
-            <li class="termitem">
-                "Search for resonant production of HH to 4b in boosted and
-                                semi-boosted topologies," CMS Collaboration (in review)
+                                boosted topology," Phys. Lett. B (2023)
             </li>
         
     </ul>
@@ -708,7 +783,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseconferences" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -779,7 +854,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseDAS" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -821,7 +896,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseoutreach" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -881,7 +956,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsetutor" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -933,7 +1008,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapseTA" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
@@ -996,7 +1071,7 @@
                     
                 
                     
-                        <div class="basedrop d-block m-0 mt-1">
+                        <div class="basedrop d-block m-0 mt-3">
     <button class="btn m-0 p-0 w-100" data-bs-toggle="collapse" data-bs-target="#collapsementor" style="text-align: left;">
         
     <div class="d-flex justify-content-between align-items-center border-bottom ms-2 pb-2 mb-2">
